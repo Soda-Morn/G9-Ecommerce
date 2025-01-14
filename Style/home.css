@@ -1,97 +1,222 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
+    margin: 0;
     font-family: "Poppins", serif;
+  }
+
+  .navbar-container {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .navbar-logo span {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .navbar-menu {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    height: 100vh;
-}
-/* //for navbar */
-.search-bar {
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    padding: 5px 15px;
-    width: 320px;
-}
-.navbar-brand img {
-    height: 68px;
-}
-.collapse .nav-item .nav-link {
-    margin: 0 12px;
-}
-.navbar-icon{
-    margin-left: 8px;
-}
-.navbar-icon .material-symbols-outlined{
-    margin: 0 8px;
-    font-size: 28px;
-    color: gray;
-}
-.search {
-    position: relative;
-    right: 12%;
-    color: gray;
-}
-/* background */
-.bg-container {
-    position: relative;
-    height: 100vh;
-    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
   }
 
-  .slideshow-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  .navbar-menu li {
+    margin: 0 15px;
   }
 
-  .slides {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  .navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
   }
 
-  .slides img {
-    width: 100%;
-    height: 70%;
-    object-fit: contain; /* Ensure the full image is visible */
-    background: #ffffff; /* Optional: Adds a background color for areas not covered by the image */
-  }
-  
-
-  .product-title {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border-radius: 5px;
+  .navbar-menu a:hover {
+    color: #ff4081;
   }
 
-  .dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  .nav-right {
     display: flex;
-    gap: 10px;
+    align-items: center;
   }
 
-  .dot {
-    width: 15px;
-    height: 15px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 24px;
+    transition: border-color 0.3s ease;
+  }
+
+  .navbar-search:hover {
+    border-color: #ff4081;
+  }
+
+  .navbar-search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.3s ease;
+  }
+
+  .navbar-search input:focus {
+    width: 250px;
+  }
+
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+  }
+
+  .navbar-icons .material-symbols-outlined {
+    font-size: 28px;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
 
-  .dot.active {
-    background: white;
+  .navbar-icons .material-symbols-outlined:hover {
+    color: #ff4081;
+  }
+  .navbar-container .navbar .menu-toggle{
+    display: none;
+  }
+  .navbar-container .navbar .navbar-icons a .count{
+    position: absolute;
+    top: -9px;    
+    width: 15px;
+    height: 18px;
+    text-align: center;
+    line-height: 20px;
+    background: orange;
+    color: white;  
+    font-size: 12px;
+    border-radius: 25%;
+  }
+
+  /* slidebar */
+  .slider{
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+.slider .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider  .banner_2{
+  width: 23%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider  .banner_2 a img{
+  height: 100%;
+  width: 100%;
+}
+.slider .container .slide-swp{
+  width: 75%;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-wrapper{
+  height: auto;
+}
+
+.slider .container .slide-swp .swiper-pagination span{
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+  width: 34px ;
+  height: 8px ;
+  border-radius: 30px ;
+}
+
+
+  @media (max-width: 1024px) {
+    .navbar-container .navbar .navbar-menu {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      background-color: #fff;
+      width: 100%;
+      transform: translateY(-20px);
+       opacity: 0;
+    }
+
+    .navbar-container .navbar .navbar-menu.active {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .navbar-menu li{
+      margin: 10px 0;
+    }
+
+    .nav-right {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .navbar {
+      flex-direction: column;
+    }
+
+    .navbar-container .navbar .menu-toggle {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+      padding: 10px;
+    }
+
+    .navbar-search input {
+      width: 250px;
+    }
+
+    .navbar-search input:focus {
+      width: 200px;
+    }
+
+    .navbar-menu li {
+      margin: 10 10px;
+    }
   }
