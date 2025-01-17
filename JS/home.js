@@ -26,6 +26,21 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+/*=============== IMAGE GALLERY ===============*/
+function imgGallery() {
+  const mainImg = document.querySelector(".details__img"),
+    smallImg = document.querySelectorAll(".details__small-img");
+
+  smallImg.forEach((img) => {
+    img.addEventListener("click", function () {
+      mainImg.src = this.src;
+    });
+  });
+}
+
+imgGallery();
+
+
 
 
 

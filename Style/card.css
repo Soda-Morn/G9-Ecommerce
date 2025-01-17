@@ -1,0 +1,102 @@
+General styles
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(154, 13%, 32%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    table-layout: fixed;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid hsl(113, 15%, 90%);
+}
+
+.table th {
+    color: hsl(176, 88%, 27%);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.table td {
+    font-size: 0.875rem;
+    color: hsl(154, 13%, 32%);
+}
+
+/* Image column */
+.table .product-image {
+    width: 80px;
+    height: auto;
+}
+
+/* Name column */
+.table .product-name {
+    font-weight: bold;
+    color: hsl(176, 88%, 27%);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.table .product-description {
+    font-size: 0.75rem;
+    color: hsl(154, 13%, 32%);
+}
+
+/* Stock status */
+.table .stock-status {
+    color: hsl(176, 88%, 27%);
+    font-weight: bold;
+}
+
+/* Action button */
+.table .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: hsl(176, 88%, 27%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.table .btn:hover {
+    background-color: hsl(176, 88%, 37%);
+}
+
+/* Trash icon */
+.table .trash-icon {
+    color: hsl(60, 1%, 56%);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.table .trash-icon:hover {
+    color: red;
+}
