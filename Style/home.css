@@ -274,7 +274,49 @@ body {
   border-bottom: 12px orange;
   width: 10px;
 }
+/* Popular - card */
+.popular-container{
+  width: 90%;
+  margin: auto;
+}
+.popular-container h4{
+  margin: 70px 0;
+  color: gray;
+}
+.cardPops{
+  display: flex;
+  gap: 24px;
+}
+.popular-container .cardPops .cardPop{
+  width: 200px;
+  height: 250px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-radius: 14px;
+}
+.cardPop .imgPop img{
+  width: 130px;
+  display: flex;
+  margin-left: 14px;
+  padding: 16px;
+  transition: 0.3s; 
+  height: 150px;
+  background: whitesmoke;
+  border-radius: 14px;
+  margin-top: 24px;
+}
 
+
+.cardPop .imgPop img:hover{
+  scale: 1.05;
+}
+.cardPop a {
+  text-decoration: none;
+  text-align: center;
+}
+.cardPop a h6{
+  margin-top: 18px;
+  color: orange;
+}
 /* Top-card */
 .cardTop{
   width: 90%;

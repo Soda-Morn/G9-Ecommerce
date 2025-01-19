@@ -101,8 +101,21 @@ document.querySelectorAll('[data-product-id]').forEach(icon => {
   });
 });
 
-// On page load, update the favorite count
-document.addEventListener('DOMContentLoaded', updateFavoriteCount);
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal', // Enable horizontal scrolling
+    slidesPerView: 'auto',   // Allow slides to respect their width
+    spaceBetween: 24,        // Space between slides
+    grabCursor: true,        // Show grabbing cursor for better UX
+    freeMode: true,          // Allow free scrolling
+  });
+});
+
+
+
+
+
+
 
 
 
