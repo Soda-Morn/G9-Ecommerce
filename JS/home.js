@@ -5,7 +5,6 @@ menuToggle.addEventListener('click', () => {
   navbarMenu.classList.toggle('active');
 });
 
-
 let slideIndex = 0;
 showSlides();
 
@@ -100,6 +99,18 @@ document.querySelectorAll('[data-product-id]').forEach(icon => {
       });
   });
 });
+
+//function for clsoe form login
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
 
 
 
