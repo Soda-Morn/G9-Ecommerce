@@ -181,55 +181,61 @@ tbody tr td img {
   padding: 0.7rem 0.5rem;
   text-align: center;
 }
-.footer {
-  height: 62vh;
-  margin-top:30px;
-  display: flex;
-  background: rgb(47, 47, 47);
-  color: rgba(255, 255, 255, 0.493);
-  font-size: 15px;
-  flex-wrap: wrap;
-  h3,
-  h2 {
-    color: white;
+.table td {
+  input{
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid gray;
+  padding-left: 10px;
+
+
   }
 }
-.footer ul li {
-  list-style: none;
-  text-align: left;
-  padding: 5px;
-}
-.footer h3 {
-  margin-left: 40px;
-}
-.logo-footer {
-  width: 33%;
-  padding-left: 50px;
-  display: flex;
-  flex-direction: column;
-  h2 {
-    padding: 15px;
-  }
-}
-.footer-left,
-.footer-center {
-  width: 20%;
-  padding-top: 20px;
+.table .btn {
+  
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.footer-right {
-  padding: 20px 0 0 0;
+.table .btn:hover {
+    background-color: rgb(175, 123, 28);
 }
-.network {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 0 20px;
+
+/* Trash icon */
+.table .trash-icon {
+    color: hsl(60, 1%, 56%);
+    font-size: 1.25rem;
+    margin-left: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: center;
 }
-.footer-right img {
-  width: 25px;
-  height: 25px;
-  padding-left: 40px;
-  text-align: center;
+
+.table .trash-icon:hover {
+    color: red;
+}
+/* Animation for deleting an item */
+.delete-animation {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 }
