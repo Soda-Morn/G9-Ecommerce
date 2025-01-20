@@ -474,15 +474,15 @@ body {
 button {
   background-color: orange;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
 }
-
 button:hover {
   opacity: 0.8;
 }
+
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
@@ -496,14 +496,14 @@ button:hover {
 label {
   font-weight: bold;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #333;
 }
 
-#text, #password {
+#text, #password, #email, #confirm-password {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
+  padding: 8px;
+  margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -558,6 +558,21 @@ span.psw {
   justify-content: center;
   margin: 24px 0;
 }
+button[type="Submit"]{
+  border-radius: 5px;
+}
+/* form sign up */
+.form{
+  display: flex;
+  gap: 10px;
+  .input{
+    display: flex;
+    flex-direction: column;
+  }
+  /* flex-direction: column; */
+}
+
+
 
 /* The Close Button (x) */
 .close {

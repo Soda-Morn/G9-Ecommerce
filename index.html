@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PNC Shop</title>
 </head>
 
 <body>
@@ -82,11 +82,48 @@
                     <button type="submit">Login</button>
                     <div class="regis-info">
                         <span>Don't have an account ?</span>
-                        <a href="#">Sign up</a>
+                        <a href="#" onclick="document.getElementById('id02').style.display='block'; document.getElementById('id01').style.display='none';">Sign Up</a>
                     </div>
                 </div>
             </form>
         </div>
+        <!-- form sign up -->
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <h2>Register</h2>
+                <div class="container">
+                    <div class="form">
+                        <div class="input">
+                            <label for="firstname"><b>First Name</b></label>
+                        <input type="text" id="text" placeholder="Enter Firstname" name="firstname" required>
+                        </div>
+                        <div class="input">
+                            <label for="lastname"><b>Last Name</b></label>
+                            <input type="text" id="text" placeholder="Enter Lastname" name="lastname" required>
+                        </div>
+                    </div>
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" id="email" placeholder="Enter Your Email" name="email">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                    <label class="checkpw">
+                        <div class="remember">
+                            <input type="checkbox" checked="checked" name="remember" > 
+                            <span class="check-rm">Remember me</span>
+                        </div>
+                    </label>
+                    <button type="submit">Register</button>
+                    <div class="regis-info">
+                        <span>Already have an account?</span>
+                        <a href= "#" onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none';">Sign In</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <div class="slide">
             <div class="slideshow-container">
                 <div class="left">
