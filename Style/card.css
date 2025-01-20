@@ -193,49 +193,5 @@ tbody tr td img {
 
   }
 }
-.table .btn {
-  
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: orange;
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
 
-.table .btn:hover {
-    background-color: rgb(175, 123, 28);
-}
 
-/* Trash icon */
-.table .trash-icon {
-    color: hsl(60, 1%, 56%);
-    font-size: 1.25rem;
-    margin-left: 24px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    text-align: center;
-}
-
-.table .trash-icon:hover {
-    color: red;
-}
-/* Animation for deleting an item */
-.delete-animation {
-    animation: fadeOut 0.5s ease-out forwards;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-}

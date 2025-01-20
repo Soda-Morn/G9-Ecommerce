@@ -101,16 +101,6 @@ document.querySelectorAll('[data-product-id]').forEach(icon => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal', // Enable horizontal scrolling
-    slidesPerView: 'auto',   // Allow slides to respect their width
-    spaceBetween: 24,        // Space between slides
-    grabCursor: true,        // Show grabbing cursor for better UX
-    freeMode: true,          // Allow free scrolling
-  });
-});
-
 
 
 
