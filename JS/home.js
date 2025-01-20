@@ -5,7 +5,6 @@ menuToggle.addEventListener('click', () => {
   navbarMenu.classList.toggle('active');
 });
 
-
 let slideIndex = 0;
 showSlides();
 
@@ -101,15 +100,17 @@ document.querySelectorAll('[data-product-id]').forEach(icon => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal', // Enable horizontal scrolling
-    slidesPerView: 'auto',   // Allow slides to respect their width
-    spaceBetween: 24,        // Space between slides
-    grabCursor: true,        // Show grabbing cursor for better UX
-    freeMode: true,          // Allow free scrolling
-  });
-});
+//function for clsoe form login
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
 
 
 

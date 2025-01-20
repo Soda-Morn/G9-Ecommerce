@@ -1,329 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PNC Shop</title>
-    <link rel="stylesheet" href="Style/home.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Swiper CSS -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-</head>
+    <html lang="en">
 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PNC Shop</title>
+        <link rel="stylesheet" href="Style/home.css" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    </head>
 
-<body>
-    <nav class="navbar-container">
-        <div class="navbar">
-            <div class="navbar-logo">
-                <img src="Picture/Home/Logo.png" alt="PNC Shop Logo" />
-                <span>PNC SHOP</span>
-            </div>
-            <span class="menu-toggle material-symbols-outlined">menu</span>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Category</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <div class="navbar-search">
-                    <input type="text" placeholder="Search..." />
-                    <span class="material-symbols-outlined search">search</span>
+    <body>
+        <nav class="navbar-container">
+            <div class="navbar">
+                <div class="navbar-logo">
+                    <img src="Picture/Home/Logo.png" alt="PNC Shop Logo" />
+                    <span>PNC SHOP</span>
                 </div>
-                <div class="navbar-icons">
-                    <a href="./Page/favorite.html">
-                        <span class="material-symbols-outlined">favorite</span>
-                        <span class="count count_favourite">0</span>
-                    </a>
+                <span class="menu-toggle material-symbols-outlined">menu</span>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Category</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="navbar-search">
+                        <input type="text" placeholder="Search..." />
+                        <span class="material-symbols-outlined search">search</span>
+                    </div>
+                    <div class="navbar-icons">
+                        <a href="./Page/favorite.html">
+                            <span class="material-symbols-outlined">favorite</span>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-outlined">local_mall</span>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                        <a href="#" onclick="document.getElementById('id01').style.display='block'">
+                            <span class="material-symbols-outlined" type="button" class="btn btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">account_circle</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- The Modal -->
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <h2>Login</h2>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                    <label class="checkpw">
+                        <div class="remember">
+                            <input type="checkbox" checked="checked" name="remember" > 
+                            <span class="check-rm">Remember me</span>
+                        </div>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </label>
+                    <button type="submit">Login</button>
+                    <div class="regis-info">
+                        <span>Don't have an account ?</span>
+                        <a href="#">Sign up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="slide">
+            <div class="slideshow-container">
+                <div class="left">
+                    <div class="mySlides fade">
+                        <img src="Picture/Home/banner_home1.png">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Picture/Home/banner_home2.png">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Picture/Home/banner_home4 (2).png">
+                    </div>
+                    <br>
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="Picture/Home/banner_home3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- banner section -->
+        <div class="banners_4">
+            <div class="container">
+                <div class="box">
+                    <img src="Picture/Home/banner3_1.png" alt="">
+                    <div class="text">
+                        <h5>Break Disc</h5>
+                        <h5>deals on this</h5>
+                        <div class="sale">
+                            <p>Up <br> To</p>
+                            <span>70%</span>
+                        </div>
+                        <h6><a href="#">Add card</a></h6>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Picture/Home/banner3_2.png" alt="">
+                    <div class="text">
+                        <h5>Break Disc</h5>
+                        <h5>deals on this</h5>
+                        <div class="sale">
+                            <p>Up <br> To</p>
+                            <span>70%</span>
+                        </div>
+                        <h6><a href="#">Add card</a></h6>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Picture/Home/banner3_3.png" alt="">
+                    <div class="text">
+                        <h5>Break Disc</h5>
+                        <h5>deals on this</h5>
+                        <div class="sale">
+                            <p>Up <br> To</p>
+                            <span>70%</span>
+                        </div>
+                        <h6><a href="#">Add card</a></h6>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Picture/Home/banner3_4.png" alt="">
+                    <div class="text">
+                        <h5>Break Disc</h5>
+                        <h5>deals on this</h5>
+                        <div class="sale">
+                            <p>Up <br> To</p>
+                            <span>70%</span>
+                        </div>
+                        <h6><a href="#">Add card</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popular Category -->
+        <div class="popular-container">
+            <h4>Popular Category</h4>
+            <div class="cardPops">
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/1.png" alt="">
+                    </div>
                     <a href="#">
-                        <span class="material-symbols-outlined">local_mall</span>
-                        <span class="count count_favourite">0</span>
+                        <h6>Computer</h6>
                     </a>
+                </div>
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/3.png" alt="">
+                    </div>
                     <a href="#">
-                        <span class="material-symbols-outlined">account_circle</span>
+                        <h6>Computer</h6>
+                    </a>
+                </div>
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/4.png" alt="">
+                    </div>
+                    <a href="#">
+                        <h6>Computer</h6>
+                    </a>
+                </div>
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/5.png" alt="">
+                    </div>
+                    <a href="#">
+                        <h6>Computer</h6>
+                    </a>
+                </div>
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/6.png" alt="">
+                    </div>
+                    <a href="#">
+                        <h6>Computer</h6>
+                    </a>
+                </div>
+                <div class="cardPop">
+                    <div class="imgPop">
+                        <img src="./Picture/Home/7.png" alt="">
+                    </div>
+                    <a href="#">
+                        <h6>Computer</h6>
                     </a>
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="slide">
-        <div class="slideshow-container">
-            <div class="left">
-                <div class="mySlides fade">
-                    <img src="Picture/Home/banner_home1.png">
+        <!-- Top product section -->
+        <div class="header-card">
+            <h2>Top product</h2>
+            <span></span>
+        </div>
+        <div class="cardTop">
+            <div class="product">
+                <div class="card">
+                    <div class="sale_present">-20%</div>
+                    <div class="img_product">
+                        <img src="Picture/Home/0.png" alt="Product Image"> <!-- Replace with your image -->
+                    </div>
+                    <div class="name_product">
+                        <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$20.00</p>
+                        <span class="old_price">$25.00</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="0">favorite</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="mySlides fade">
-                    <img src="Picture/Home/banner_home2.png">
+                <div class="card">
+                    <div class="sale_present">-20%</div>
+                    <div class="img_product">
+                        <img src="Picture/Home/1.png" alt="Product Image"> <!-- Replace with your image -->
+                    </div>
+                    <div class="name_product">
+                        <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$20.00</p>
+                        <span class="old_price">$25.00</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="1">favorite</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="mySlides fade">
-                    <img src="Picture/Home/banner_home4 (2).png">
+                <div class="card">
+                    <div class="sale_present">-20%</div>
+                    <div class="img_product">
+                        <img src="Picture/Home/2.png" alt="Product Image"> <!-- Replace with your image -->
+                    </div>
+                    <div class="name_product">
+                        <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$20.00</p>
+                        <span class="old_price">$25.00</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="2">favorite</span>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <div class="dots-container">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="card">
+                    <div class="sale_present">-20%</div>
+                    <div class="img_product">
+                        <img src="Picture/Home/3.png" alt="Product Image"> <!-- Replace with your image -->
+                    </div>
+                    <div class="name_product">
+                        <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$20.00</p>
+                        <span class="old_price">$25.00</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="3">favorite</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="right">
-                <img src="Picture/Home/banner_home3.png" alt="">
+                <div class="card">
+                    <div class="sale_present">-20%</div>
+                    <div class="img_product">
+                        <img src="Picture/Home/3.png" alt="Product Image"> <!-- Replace with your image -->
+                    </div>
+                    <div class="name_product">
+                        <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$20.00</p>
+                        <span class="old_price">$25.00</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="3">favorite</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-     <!-- banner section -->
-    <div class="banners_4">
-        <div class="container">
-            <div class="box">
-                <img src="Picture/Home/banner3_1.png" alt="">
-                <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
-                    <div class="sale">
-                        <p>Up <br> To</p>
-                        <span>70%</span>
-                    </div>
-                    <h6><a href="#">Add card</a></h6>
-                </div>
-            </div>
-            <div class="box">
-                <img src="Picture/Home/banner3_2.png" alt="">
-                <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
-                    <div class="sale">
-                        <p>Up <br> To</p>
-                        <span>70%</span>
-                    </div>
-                    <h6><a href="#">Add card</a></h6>
-                </div>
-            </div>
-            <div class="box">
-                <img src="Picture/Home/banner3_3.png" alt="">
-                <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
-                    <div class="sale">
-                        <p>Up <br> To</p>
-                        <span>70%</span>
-                    </div>
-                    <h6><a href="#">Add card</a></h6>
+        <script src="JS/home.js"></script>
+        <script src="JS/favorite.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <!-- Swiper JS -->
 
-                </div>
-            </div>
-            <div class="box">
-                <img src="Picture/Home/banner3_4.png" alt="">
-                <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
-                    <div class="sale">
-                        <p>Up <br> To</p>
-                        <span>70%</span>
-                    </div>
-                    <h6><a href="#">Add card</a></h6>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Popular Category -->
-     <div class="popular-container">
-         <h4>Popular Category</h4>
-        <div class="cardPops">
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/1.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/3.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/4.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/5.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/6.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-            <div class="cardPop">
-                <div class="imgPop">
-                    <img src="./Picture/Home/7.png" alt="">
-                </div>
-                <a href="#"><h6>Computer</h6></a>
-            </div>
-        </div>
-     </div>
-    <!-- Top product section -->
-    <div class="header-card">
-        <h2>Top product</h2>
-        <span></span>
-    </div>
-    <div class="cardTop">
-        <div class="product">
-            <div class="card">
-                <div class="sale_present">-20%</div>
-                <div class="img_product">
-                    <img src="Picture/Home/0.png" alt="Product Image"> <!-- Replace with your image -->
-                </div>
-                <div class="name_product">
-                    <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
-                </div>
-                <div class="stars">
-                    <span class="material-symbols-outlined start">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star_half</span>
-                </div>
-                <div class="price">
-                    <p>$20.00</p>
-                    <span class="old_price">$25.00</span>
-                </div>
-                <div class="icons">
-                    <div class="btn_add_cart"> Add to Cart</div>
-                    <div class="icon_product">
-                        <span class="material-symbols-outlined" data-product-id="0">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="sale_present">-20%</div>
-                <div class="img_product">
-                    <img src="Picture/Home/1.png" alt="Product Image"> <!-- Replace with your image -->
-                </div>
-                <div class="name_product">
-                    <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
-                </div>
-                <div class="stars">
-                    <span class="material-symbols-outlined start">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star_half</span>
-                </div>
-                <div class="price">
-                    <p>$20.00</p>
-                    <span class="old_price">$25.00</span>
-                </div>
-                <div class="icons">
-                    <div class="btn_add_cart"> Add to Cart</div>
-                    <div class="icon_product">
-                        <span class="material-symbols-outlined" data-product-id="1">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="sale_present">-20%</div>
-                <div class="img_product">
-                    <img src="Picture/Home/2.png" alt="Product Image"> <!-- Replace with your image -->
-                </div>
-                <div class="name_product">
-                    <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
-                </div>
-                <div class="stars">
-                    <span class="material-symbols-outlined start">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star_half</span>
-                </div>
-                <div class="price">
-                    <p>$20.00</p>
-                    <span class="old_price">$25.00</span>
-                </div>
-                <div class="icons">
-                    <div class="btn_add_cart"> Add to Cart</div>
-                    <div class="icon_product">
-                        <span class="material-symbols-outlined" data-product-id="2">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="sale_present">-20%</div>
-                <div class="img_product">
-                    <img src="Picture/Home/3.png" alt="Product Image"> <!-- Replace with your image -->
-                </div>
-                <div class="name_product">
-                    <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
-                </div>
-                <div class="stars">
-                    <span class="material-symbols-outlined start">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star_half</span>
-                </div>
-                <div class="price">
-                    <p>$20.00</p>
-                    <span class="old_price">$25.00</span>
-                </div>
-                <div class="icons">
-                    <div class="btn_add_cart"> Add to Cart</div>
-                    <div class="icon_product">
-                        <span class="material-symbols-outlined" data-product-id="3">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="sale_present">-20%</div>
-                <div class="img_product">
-                    <img src="Picture/Home/3.png" alt="Product Image"> <!-- Replace with your image -->
-                </div>
-                <div class="name_product">
-                    <a href="#">Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD</a>
-                </div>
-                <div class="stars">
-                    <span class="material-symbols-outlined start">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star_half</span>
-                </div>
-                <div class="price">
-                    <p>$20.00</p>
-                    <span class="old_price">$25.00</span>
-                </div>
-                <div class="icons">
-                    <div class="btn_add_cart"> Add to Cart</div>
-                    <div class="icon_product">
-                        <span class="material-symbols-outlined" data-product-id="3">favorite</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="JS/home.js"></script>
-    <script src="JS/favorite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <!-- Swiper JS -->
+    </body>
+
+    </html>
 </body>
 
-</html>
-</body>
 </html>
