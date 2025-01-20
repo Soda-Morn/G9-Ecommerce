@@ -1,0 +1,45 @@
+[
+  {
+    "id": 0,
+    "img": "../Picture/Home/5.png",
+    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
+    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "price": 300,
+    "instock":"instok"
+  },
+  {
+    "id": 1,
+    "img": "../Picture/Home/6.png",
+    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
+    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "price": 200,
+    "instock":"instok"
+  },
+  {
+    "id": 2,
+    "img": "../Picture/Home/7.png",
+    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
+    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "price": 100,
+    "instock":"instok"
+  },
+  {
+
+    "id": 3,
+    "img": "../Picture/Home/8.png",
+    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
+    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "price": 400,
+    "instock":"instok"
+  },
+  {
+    "id": 4,
+    "img": "../Picture/Home/9.png",
+    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
+    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "price": 300,
+    "instock":"instok"
+  }
+
+
+]
