@@ -490,3 +490,19 @@ body {
       margin: 10 10px;
     }
   }
+  .section{
+    width: 90%;
+    margin: auto;
+    background-color:lightblue;
+  }
+  .section-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .detail-card{
+    width: 49%;
+    height: 60vh;  
+    border: 1px solid gray;
+  }
