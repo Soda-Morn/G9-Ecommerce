@@ -188,16 +188,21 @@ body {
   color: #fff;
   padding: 10px 20px;
 }
-/* .menu{
-  background-color: #d37878;
-  margin-bottom: 10px;
-  height: 55vh;
-} */
+.menu a{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  height: 50px;
+  width: 100%; 
+}
+a{
+  text-decoration: none;
+}
 .product{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* gap: 40px;  */
 }
 .card {
   margin: 70px 0;
@@ -208,27 +213,27 @@ body {
   box-shadow: 5px 5px 10px #94949428;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  width: 260px;
-  gap: 10px;
+  width: 240px;
+  /* gap: 10px; */
   margin-left: 50px;
 }
-
-.product .sale_present{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-  background: #ed0505;
-  color: white;
-  padding: 4px 10px;
-  font-size: 13px;
-}
+ .sale_present{
+  background-color:red;
+  width: 25%;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+  margin-left: 180px;
+ }
+ .old_price{
+  margin-top: 15px;
+ }
 .product .img_product{
   position: relative;
   height: 180px;
   padding: 0 20px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   transition: 0.3s;
 }
@@ -308,4 +313,57 @@ body {
 .product .icons  .btn_add_cart:Hover{
   scale: 1.05;
   background: #f47600;
+}
+.footer{
+  height: 62vh;
+  margin-top: 98%;
+  display: flex;
+  background: rgb(47, 47, 47);
+  color: rgba(255, 255, 255, 0.493);
+  /* justify-content: space-between; */
+  font-size: 15px;
+  flex-wrap: wrap;
+  h3 ,h2{
+    color: white;
+  }
+}
+.footer ul li{
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+}
+.footer h3{
+  margin-left: 40px;
+}
+.logo-footer{
+  width: 33%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  h2{
+  padding: 15px ;
+  }
+}
+.footer-left,
+.footer-center{
+  width: 20%;
+  padding-top: 20px;
+  
+}
+
+.footer-right{
+ padding: 20px 0 0 0;
+}
+.network{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0 20px;
+}
+.footer-right img{
+  width: 25px;
+  height: 25px;
+  padding-left: 40px;
+  text-align: center;
 }
