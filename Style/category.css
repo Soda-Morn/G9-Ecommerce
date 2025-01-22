@@ -138,9 +138,10 @@ body {
     display: flex;
     background-color: rgb(251, 237, 207);
     height: 60vh;
-    width: 70%;
+    width: 80%;
     margin-top: 20px;
-    margin-left: 80px;
+    margin-bottom: 60px;
+    margin-left: 50px;
 }
 .side-left:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -148,9 +149,10 @@ body {
 .side-right{
     display: flex;
     background-size: cover;
-    width: 30%;
+    width: 35%;
+    height: 60vh;
     margin-top: 20px;
-    margin-right: 75px;
+    margin-right: 50px;
     background-image: url(../Picture/category/right-img.png);
 }
 .side-right:hover{
@@ -176,46 +178,60 @@ body {
     color:#fff;
     font-size: 2rem;
 }
+.container{
+  width: 90%;
+  margin: auto;
+}
 .category{
   display: flex;
   justify-content: space-between;
+  gap: 16px;
 }
 .text-categories{
-  margin-left: 80px;
+  width: 15%;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 .all-categories{
   background-color: orange;
   color: #fff;
-  padding: 10px 20px;
+  width: 80%;
+  margin-left: 49px;
+  padding: 10px 0;
+  text-align: center;
+}
+.menu{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 80%;
+  margin-left: 49px;
 }
 .menu a{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   height: 50px;
-  width: 100%; 
+  width: 100%;
 }
 a{
   text-decoration: none;
 }
 .product{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  width: 85%;
+  gap: 12px;
 }
 .card {
   margin: 70px 0;
   background: #fff;
   padding: 20px 20px;
-  margin-right: 80px;
   transition: 0.3s;
   box-shadow: 5px 5px 10px #94949428;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  width: 240px;
-  /* gap: 10px; */
-  margin-left: 50px;
+  width: 20%;
+  background: #fff;
+  margin-top: 10px;
 }
  .sale_present{
   background-color:red;
@@ -223,7 +239,8 @@ a{
   padding: 5px;
   color: #fff;
   text-align: center;
-  margin-left: 180px;
+  margin-left: 160px;
+  /* margin-right: 10px; */
  }
  .old_price{
   margin-top: 15px;
@@ -316,7 +333,7 @@ a{
 }
 .footer{
   height: 62vh;
-  margin-top: 98%;
+  margin-top: 5%;
   display: flex;
   background: rgb(47, 47, 47);
   color: rgba(255, 255, 255, 0.493);
@@ -347,8 +364,7 @@ a{
 .footer-left,
 .footer-center{
   width: 20%;
-  padding-top: 20px;
-  
+  padding-top: 20px; 
 }
 
 .footer-right{
