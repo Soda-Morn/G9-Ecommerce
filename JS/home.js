@@ -21,7 +21,7 @@ function showSlides() {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += "active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
@@ -38,6 +38,7 @@ function imgGallery() {
 }
 
 imgGallery();
+
 // Function to update the favorite count based on localStorage
 function updateFavoriteCount() {
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -99,21 +100,6 @@ document.querySelectorAll('[data-product-id]').forEach(icon => {
       });
   });
 });
-
-// function for clsoe form login
-var modal = document.getElementById('id01');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-var modals = document.getElementById('id02');
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
-
 
 
 

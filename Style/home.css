@@ -486,7 +486,7 @@ button:hover {
   #id01,#id02{
     height: 100vh;
     overflow: hidden;
-    padding-bottom: 10px;  
+    padding-bottom: 40px;  
   }
 }
 .cancelbtn {
@@ -516,6 +516,16 @@ label {
   font-size: 1em;
   outline: none;
 }
+#rPassword, #rEmail, #fName, #lName {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
 
 .modal {
   display: none; 
@@ -530,8 +540,6 @@ label {
   background-color: rgba(0,0,0,0.4);
   padding-top: 60px;
 }
-
-
 .modal .modal-content {
   padding: 18px;
   background-color: #fefefe;
@@ -575,11 +583,7 @@ button[type="Submit"]{
     display: flex;
     flex-direction: column;
   }
-  /* flex-direction: column; */
 }
-
-
-
 /* The Close Button (x) */
 .close {
   position: absolute;
@@ -595,7 +599,6 @@ button[type="Submit"]{
   color: red;
   cursor: pointer;
 }
-
 /* Add Zoom Animation */
 .animate  {
   -webkit-animation: animatezoom 0.6s;
@@ -614,7 +617,6 @@ button[type="Submit"]{
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {

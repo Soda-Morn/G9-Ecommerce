@@ -60,17 +60,17 @@
                 </div>
             </div>
         </nav>
-        <!-- The Modal -->
+        <!-- Login form -->
         <div class="form-login">
             <div id="id01" class="modal">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <!-- Modal Content -->
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" action="./index.html">
                     <h2>Login</h2>
                     <div class="container">
-                        <label for="uname"><b>Username</b></label>
-                        <input type="text" id="text" placeholder="Enter Username" name="uname" required>
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" id="email" placeholder="Enter Email" name="uname" required>
                         <label for="psw"><b>Password</b></label>
                         <input type="password" id="password" placeholder="Enter Password" name="psw" required>
                         <label class="checkpw">
@@ -80,7 +80,7 @@
                             </div>
                             <span class="psw">Forgot <a href="#">password?</a></span>
                         </label>
-                        <button type="submit" class="btnlog">Login</button>
+                        <button type="submit" class="btnlog" id="submitSignIn">Login</button>
                         <div class="regis-info">
                             <span>Don't have an account ?</span>
                             <a href="#"
@@ -94,31 +94,31 @@
             <div id="id02" class="modal">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
-                <!-- Modal Content -->
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" action="./index.html">
                     <h2>Register</h2>
                     <div class="container">
                         <div class="form">
                             <div class="input">
                                 <label for="firstname"><b>First Name</b></label>
-                                <input type="text" id="text" placeholder="Enter Firstname" name="firstname" required>
+                                <input type="text" id="fName" placeholder="Enter Firstname" name="firstname" required>
                             </div>
                             <div class="input">
                                 <label for="lastname"><b>Last Name</b></label>
-                                <input type="text" id="text" placeholder="Enter Lastname" name="lastname" required>
+                                <input type="text" id="lName" placeholder="Enter Lastname" name="lastname" required>
                             </div>
                         </div>
                         <label for="email"><b>Email</b></label>
-                        <input type="email" id="email" placeholder="Enter Your Email" name="email">
+                        <input type="email" id="rEmail" placeholder="Enter Your Email" name="email">
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                        <input type="password" id="rPassword" placeholder="Enter Password" name="psw" required>
                         <label class="checkpw">
                             <div class="remember">
                                 <input type="checkbox" checked="checked" name="remember">
                                 <span class="check-rm">Remember me</span>
                             </div>
                         </label>
-                        <button type="submit" id="btn">Register</button>
+                        <button type="submit" id="submitSignUp">
+                            Register</button>
                         <div class="regis-info">
                             <span>Already have an account?</span>
                             <a href="#"
@@ -128,6 +128,7 @@
                 </form>
             </div>
         </div>
+        <!-- slide show -->
         <div class="slide">
             <div class="slideshow-container">
                 <div class="left">
@@ -403,6 +404,7 @@
 
         <script src="JS/home.js"></script>
         <script src="JS/favorite.js"></script>
+        <script src="JS/login.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
