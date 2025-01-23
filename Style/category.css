@@ -290,6 +290,14 @@ a{
   scale: 1.05;
   background: #f47600;
 }
+/* CSS for controlling image width */
+.img_product img {
+  width: 80%; /* Adjust this percentage to control the width */
+  max-width: 100%; /* Prevent images from becoming larger than their container */
+  height: 85%; /* Keep the aspect ratio */
+}
+
+/* footer section */
 .footer{
   height: 62vh;
   margin-top: 5%;
@@ -341,4 +349,86 @@ a{
   height: 25px;
   padding-left: 40px;
   text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+  .navbar-logo img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .category {
+      flex-direction: column;
+  }
+
+  .product {
+      justify-content: center;
+  }
+
+  .card {
+      width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-logo img {
+      width: 45px;
+      height: 45px;
+  }
+
+  .category {
+      padding: 20px;
+      gap: 20px;
+  }
+
+  .product {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .card {
+      width: 100%;
+  }
+
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer .logo-footer, .footer-left, .footer-center, .footer-right {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-menu {
+      margin-top: 20px;
+  }
+
+  .category {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .card {
+      width: 100%;
+  }
+
+  .footer {
+      padding: 30px 20px;
+  }
 }

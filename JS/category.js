@@ -1,16 +1,17 @@
-// Fetch and render products from the JSON file
+// Load and render products from index 5 onwards
 function loadProducts() {
   fetch('../products.json')
     .then(response => response.json())
     .then(data => {
-      localStorage.setItem('allProducts', JSON.stringify(data)); // Store products in localStorage
-      renderProducts(data); // Render all products
+      const filteredData = data.slice(5); // Start from index 5
+      localStorage.setItem('allProducts', JSON.stringify(filteredData)); // Store filtered products
+      renderProducts(filteredData); // Render filtered products
     })
     .catch(error => console.error('Error fetching products:', error));
 }
 
-// Render products dynamically starting from index 5
-function renderProducts(products, showAllCategory = false) {
+// Render products dynamically
+function renderProducts(products) {
   const productContainer = document.querySelector('.product');
   productContainer.innerHTML = ''; // Clear existing content
 
@@ -19,12 +20,9 @@ function renderProducts(products, showAllCategory = false) {
     return;
   }
 
-  // Slice the array to start rendering from index 5
-  const slicedProducts = products.slice(5);
-
-  slicedProducts.forEach(product => {
-    const saleText = !showAllCategory && product.sale ? `-${product.sale}%` : '';
-    const oldPriceText = !showAllCategory && product.oldPrice ? `$${product.oldPrice.toFixed(2)}` : '';
+  products.forEach(product => {
+    const saleText = product.sale ? `-${product.sale}%` : ''; // Sale badge
+    const oldPriceText = product.oldPrice ? `$${product.oldPrice.toFixed(2)}` : ''; // Old price if available
 
     const productCard = `
       <div class="card">
@@ -55,27 +53,27 @@ function renderProducts(products, showAllCategory = false) {
     productContainer.innerHTML += productCard;
   });
 
-  attachCartButtons();
-  attachFavoriteButtons();
+  // Attach event listeners to "Add to Cart" and "Favorite" buttons
+  setupProductActions();
 }
 
-// Filter products by category
-function filterProducts(category) {
-  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
-  const filteredProducts = category === 'all' 
-    ? allProducts 
-    : allProducts.filter(product => product.category === category);
+// Setup event listeners for product actions
+function setupProductActions() {
+  document.querySelectorAll('.btn_add_cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.getAttribute('data-product-id');
+      const product = getProductById(productId);
+      addToCart(product);
+    });
+  });
 
-  renderProducts(filteredProducts, category === 'all');
-}
-
-// Search products
-function searchProducts(searchText) {
-  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
-  const filteredProducts = allProducts.filter(product => 
-    product.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-  renderProducts(filteredProducts);
+  document.querySelectorAll('.favorite-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const productId = icon.getAttribute('data-product-id');
+      const product = getProductById(productId);
+      toggleFavorite(product);
+    });
+  });
 }
 
 // Add product to cart
@@ -98,35 +96,14 @@ function toggleFavorite(product) {
 
   if (index > -1) {
     favorites.splice(index, 1); // Remove from favorites
+    alert('Product removed from favorites!');
   } else {
     favorites.push(product); // Add to favorites
-    alert('Product is already in the favorit !')
+    alert('Product added to favorites!');
   }
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
   updateFavoriteCount();
-}
-
-// Attach event listeners to cart buttons
-function attachCartButtons() {
-  document.querySelectorAll('.btn_add_cart').forEach(button => {
-    button.addEventListener('click', () => {
-      const productId = button.getAttribute('data-product-id');
-      const product = getProductById(productId);
-      addToCart(product);
-    });
-  });
-}
-
-// Attach event listeners to favorite buttons
-function attachFavoriteButtons() {
-  document.querySelectorAll('.favorite-icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-      const productId = icon.getAttribute('data-product-id');
-      const product = getProductById(productId);
-      toggleFavorite(product);
-    });
-  });
 }
 
 // Get product by ID
@@ -147,20 +124,57 @@ function updateFavoriteCount() {
   document.querySelector('.count_favourite').textContent = favorites.length;
 }
 
+// Filter products by category
+function filterProducts(category) {
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+
+  // If "all" is selected, show all products; otherwise filter by category
+  const filteredProducts = category === 'all'
+    ? allProducts
+    : allProducts.filter(product =>
+        product.category && product.category.toLowerCase() === category.toLowerCase()
+      );
+
+  renderProducts(filteredProducts);
+}
+
+// Search functionality
+function searchProducts(query) {
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+  const productContainer = document.querySelector('.product');
+
+  if (query.length < 2) {
+    productContainer.innerHTML = ''; // Clear results if query is less than 2 chars
+    return;
+  }
+
+  const filteredProducts = allProducts.filter(product =>
+    product.name.toLowerCase().includes(query.toLowerCase())
+  );
+
+  renderProducts(filteredProducts); // Render the filtered products
+}
+
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', () => {
   loadProducts();
 
+  // Attach event listeners to category links
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
-      filterProducts(link.getAttribute('data-category'));
+      const category = link.getAttribute('data-category');
+      filterProducts(category);
     });
   });
 
-  document.querySelector('.navbar-search input').addEventListener('input', event => {
-    searchProducts(event.target.value);
-  });
+  // Attach event listener to the search bar
+  const searchInput = document.querySelector('.navbar-search input');
+  if (searchInput) {
+    searchInput.addEventListener('input', event => {
+      searchProducts(event.target.value);
+    });
+  }
 
   updateCartCount();
   updateFavoriteCount();
