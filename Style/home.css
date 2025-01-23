@@ -470,6 +470,43 @@ body {
   }
 
 /* form section */
+#profileCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: white;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 12px 24px;
+}
+
+p{
+  color: grey;
+  font-size: 18px;
+  text-align: left;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
 button {
   background-color: orange;
   color: white;
@@ -481,6 +518,55 @@ button {
 button:hover {
   opacity: 0.8;
 }
+/* Animation for showing the profile card */
+.profile-card {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close button styling */
+.close {
+  position: absolute;
+  right: 36%;
+  top: 18%;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 1;
+}
+.close:hover {
+  color: red;
+}
+
 .form-login{
   #id01,#id02{
     height: 100vh;

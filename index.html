@@ -60,9 +60,20 @@
                 </div>
             </div>
         </nav>
+        <!-- Profile Card Section -->
+        <div id="profileCard" style="display: none; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -20%); z-index: 100;">
+            <span onclick="document.getElementById('profileCard').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+            <div id="profileContent">
+                            <!-- Profile content will be dynamically inserted here -->
+            </div>
+        </div>
+        <div id="accountLink">
+            <!-- Profile image will be inserted here -->
+          </div>
         <!-- Login form -->
         <div class="form-login">
-            <div id="id01" class="modal">
+            <div id="id01" class="modal" style="display: block;">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <!-- Modal Content -->
