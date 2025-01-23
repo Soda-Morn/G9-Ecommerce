@@ -52,9 +52,9 @@
                             <span class="material-symbols-outlined">local_mall</span>
                             <span class="count count_favourite">0</span>
                         </a>
-                        <a href="#" onclick="document.getElementById('id01').style.display='block'">
-                            <span class="material-symbols-outlined" type="button" class="btn btn-primary"
-                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">account_circle</span>
+                        <a id="accountLink" href="#" onclick="document.getElementById('id01').style.display='block'">
+                            <span id="accountIcon" class="material-symbols-outlined"
+                                style="font-size: 24px;">account_circle</span>
                         </a>
                     </div>
                 </div>
@@ -122,7 +122,8 @@
                         <div class="regis-info">
                             <span>Already have an account?</span>
                             <a href="#"
-                                onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none';">Sign                           In</a>
+                                onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none';">Sign
+                                In</a>
                         </div>
                     </div>
                 </form>
@@ -151,7 +152,7 @@
                     <img src="Picture/Home/banner_home3.png" alt="">
                 </div>
             </div>
-        </div>    
+        </div>
         <!-- banner section -->
         <div class="banners_4">
             <div class="container">
