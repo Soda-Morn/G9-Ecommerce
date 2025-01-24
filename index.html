@@ -56,13 +56,14 @@
                             <span id="accountIcon" class="material-symbols-outlined"
                                 style="font-size: 24px;">account_circle</span>
                         </a>
+
                     </div>
                 </div>
             </div>
         </nav>
         <!-- Login form -->
         <div class="form-login">
-            <div id="id01" class="modal">
+            <div id="id01" class="modal" style="display: block;">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <!-- Modal Content -->
@@ -72,15 +73,21 @@
                         <label for="email"><b>Email</b></label>
                         <input type="email" id="email" placeholder="Enter Email" name="uname" required>
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" id="password" placeholder="Enter Password" name="psw" required>
-                        <label class="checkpw">
+                        <input type="password" id="loginPassword" placeholder="Enter Password" name="psw" required>
+                        <span id="loginEyeIcon" class="material-symbols-outlined"
+                            onclick="togglePasswordVisibility('loginPassword', 'loginEyeIcon')"
+                            style="cursor: pointer;">visibility_off</span>
+                        <div class="remem-section">
                             <div class="remember">
                                 <input type="checkbox" checked="checked" name="remember">
                                 <span class="check-rm">Remember me</span>
                             </div>
                             <span class="psw">Forgot <a href="#">password?</a></span>
-                        </label>
-                        <button type="submit" class="btnlog" id="submitSignIn">Login</button>
+                        </div>
+                        <div class="btn-section">
+                            <button type="submit" class="btnlog" id="submitSignIn">Login</button>
+                            <button type="button" class="btn-logout" id="submitlogout">Logout</button>
+                        </div>
                         <div class="regis-info">
                             <span>Don't have an account ?</span>
                             <a href="#"
@@ -109,8 +116,14 @@
                         </div>
                         <label for="email"><b>Email</b></label>
                         <input type="email" id="rEmail" placeholder="Enter Your Email" name="email">
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" id="rPassword" placeholder="Enter Password" name="psw" required>
+                        <div class="password-container">
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" id="registerPassword" placeholder="Enter Password" name="psw"
+                                required>
+                            <span id="registerEyeIcon" class="material-symbols-outlined"
+                                onclick="togglePasswordVisibility('registerPassword', 'registerEyeIcon')"
+                                style="cursor: pointer;">visibility_off</span>
+                        </div>
                         <label class="checkpw">
                             <div class="remember">
                                 <input type="checkbox" checked="checked" name="remember">

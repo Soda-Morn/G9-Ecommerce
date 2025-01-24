@@ -470,6 +470,41 @@ body {
   }
 
 /* form section */
+.form-login{
+  #id01,#id02{
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 40px;  
+  }
+}
+p{
+  color: grey;
+  font-size: 18px;
+  text-align: left;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
 button {
   background-color: orange;
   color: white;
@@ -481,99 +516,118 @@ button {
 button:hover {
   opacity: 0.8;
 }
-.form-login{
-  #id01,#id02{
-    height: 100vh;
-    overflow: hidden;
-    padding-bottom: 40px;  
+/* Animation for showing the profile card */
+  .btn-section{
+    display: flex;
+    gap: 14px;
   }
-}
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
+  .btn-logout{
+    background-color: rgb(37, 37, 158);
+  }
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
 
-.container {
-  padding: 16px;
-}
+  .container {
+    padding: 16px;
+  }
+  .password-container {
+    position: relative;
+    width: 100%;
 
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-#text, #password, #email, #confirm-password {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 1em;
-  outline: none;
-}
-#rPassword, #rEmail, #fName, #lName {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 1em;
-  outline: none;
-}
-
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
-  padding-top: 60px;
-}
-.modal .modal-content {
-  padding: 18px;
-  background-color: #fefefe;
-  margin: 5% auto 15% auto;
-  border: 1px solid #888;
-  width: 30%;
-}
-.modal .modal-content h2{
-  text-align: center;
-}
-.checkpw{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.checkpw .remember .check-rm {
+  }
+  #text, #loginPassword, #email, #confirm-password {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    outline: none;
+  }
+#loginEyeIcon{
+  position: absolute;
+  right: 40px;
+  top: 43%;
   color: gray;
 }
-span.psw {
-  float: right;
-  padding-top: 16px;
+#registerEyeIcon{
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  color: gray;
 }
-.checkpw .psw{
-  position: relative;
-  top: -6px;
-}
-.regis-info{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 24px 0;
-}
-button[type="Submit"]{
-  border-radius: 5px;
-}
+  #registerPassword, #rEmail, #fName, #lName {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; 	
+    box-sizing: border-box;
+    font-size: 1em;
+    outline: none;
+  }
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal .modal-content {
+    padding: 18px;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  .modal .modal-content h2{
+    text-align: center;
+  }
+  .checkpw{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .checkpw .remember .check-rm {
+    color: gray;
+  }
+  .remem-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+  }
+  span.psw {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  span a{
+    font-size: 16px;
+  }
+  .checkpw .psw{
+    position: relative;
+    top: -6px;
+  }
+  .regis-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+  }
+  button[type="Submit"]{
+    border-radius: 5px;
+  }
 /* form sign up */
 .form{
   display: flex;

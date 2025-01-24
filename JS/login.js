@@ -1,94 +1,119 @@
-// Path to the default profile image in your "Picture" folder
-const defaultProfileImage = './Picture/logo.png';
+const defaultProfileImage = './Picture/profile.jpg'; // Path to default image
 
-// Function to store registration details in localStorage and update UI
+// Function to register a new user
 function registerUser() {
   const firstName = document.getElementById('fName').value;
   const lastName = document.getElementById('lName').value;
-  const email = document.getElementById('rEmail').value;
-  const password = document.getElementById('rPassword').value;
+  const email = document.getElementById('rEmail').value.toLowerCase();
+  const password = document.getElementById('registerPassword').value;
 
   if (firstName && lastName && email && password) {
-    const user = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password, // Note: Storing passwords in localStorage is not secure for production!
-      profileImage: defaultProfileImage, // Default profile image from the Picture folder
-    };
-
-    // Save user details in localStorage under a common key
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push(user);
+
+    // Check if the email already exists
+    if (users.some(user => user.email === email)) {
+      alert('This email is already registered. Please use a different email.');
+      return;
+    }
+
+    // Save new user
+    users.push({ firstName, lastName, email, password, profileImage: defaultProfileImage });
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Registration successful!');
-
-    // Update UI to show the user's profile image
-    updateProfileImage(user.profileImage);
-
-    // Automatically switch to login form
-    document.getElementById('id02').style.display = 'none'; // Hide the register form
-    document.getElementById('id01').style.display = 'block'; // Show the login form
-
-    document.getElementById('email').value = email; // Pre-fill email
-    document.getElementById('password').value = password; // Pre-fill password
+    document.getElementById('id02').style.display = 'none'; // Hide registration form
+    document.getElementById('id01').style.display = 'block'; // Show login form
   } else {
     alert('Please fill out all fields.');
   }
 }
 
-// Function to handle user login and update UI
+// Function to handle user login
 function loginUser() {
-  const input = document.getElementById('email').value.toLowerCase();
-  const password = document.getElementById('password').value;
-
+  const email = document.getElementById('email').value.toLowerCase();
+  const password = document.getElementById('loginPassword').value;
   const users = JSON.parse(localStorage.getItem('users')) || [];
 
-  // Find a user that matches the provided input
-  const user = users.find(
-    (user) =>
-      (user.email.toLowerCase() === input ||
-        user.firstName.toLowerCase() === input ||
-        user.lastName.toLowerCase() === input) &&
-      user.password === password
-  );
+  const user = users.find(u => u.email === email && u.password === password);
 
   if (user) {
     alert(`Welcome back, ${user.firstName}!`);
-    
-    // Update UI to show the user's profile image
+    localStorage.setItem('currentUser', JSON.stringify(user));
     updateProfileImage(user.profileImage);
-
-    window.location.href = './index.html'; // Redirect to index.html
+    document.getElementById('id01').style.display = 'none'; // Hide login form
   } else {
-    alert('No matching account found or incorrect password.');
+    alert('Incorrect email or password.');
   }
 }
 
 // Function to update profile image in the DOM
 function updateProfileImage(imageUrl) {
   const accountLink = document.getElementById('accountLink');
-  accountLink.innerHTML = `<img src="${imageUrl}" alt="Profile Image" style="width: 50px; height: 50px; border-radius: 50%;">`;
+  if (imageUrl) {
+    accountLink.innerHTML = `
+      <img src="${imageUrl}" 
+           alt="Profile Image" 
+           style="width: 50px; height: 50px; border-radius: 50%; cursor: pointer;" 
+           onclick="toggleProfileCard()">
+    `;
+  } else {
+    accountLink.innerHTML = `
+      <span id="accountIcon" class="material-symbols-outlined"
+            style="font-size: 24px;">account_circle</span>
+    `;
+  }
 }
 
-// Attach event listeners to the form buttons
+// Function to logout the user
+function logoutUser() {
+  localStorage.removeItem('currentUser');
+  alert('You have logged out.');
+
+  // Reset profile icon to default (i.e., account_circle)
+  updateProfileImage(null);
+
+  window.location.reload(); // Reload the page to reflect changes
+}
+
+// Initialize the app on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    updateProfileImage(currentUser.profileImage);
+    document.getElementById('id01').style.display = 'none';
+  } else {
+    document.getElementById('id01').style.display = 'block';
+  }
+});
+
+// Event listeners for form buttons
 document.getElementById('submitSignUp').addEventListener('click', function (event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault();
   registerUser();
 });
 
 document.getElementById('submitSignIn').addEventListener('click', function (event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault();
   loginUser();
 });
 
-// Check if a user is already logged in
-document.addEventListener('DOMContentLoaded', () => {
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  const lastLoggedInUser = users[users.length - 1]; // Assuming last registered or logged-in user is active
-
-  if (lastLoggedInUser) {
-    updateProfileImage(lastLoggedInUser.profileImage);
-  }
+// Event listener for logout button
+document.getElementById('submitlogout').addEventListener('click', function (event) {
+  event.preventDefault(); // Prevent any default action (form submission)
+  logoutUser();
 });
+
+// Function to toggle password visibility
+function togglePasswordVisibility(inputId, iconId) {
+  const passwordInput = document.getElementById(inputId);
+  const eyeIcon = document.getElementById(iconId);
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text'; // Show the password
+    eyeIcon.textContent = 'visibility'; // Change icon to open eye
+  } else {
+    passwordInput.type = 'password'; // Hide the password
+    eyeIcon.textContent = 'visibility_off'; // Change icon to closed eye
+  }
+}
