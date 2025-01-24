@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Style/category.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="JS/category">
     <title>Document</title>
 </head>
 
@@ -56,7 +56,7 @@
             </div>
             <div class="side-right">
                 <h2 class="text-side-right">Special price</h2>
-                <h1 class="side-discont">30%</h1>
+                <h1 class="side-discont">-30%</h1>
             </div>
 
         </div>
@@ -133,7 +133,7 @@
                         <img src="/Picture/category/eairphone.png" alt="Product Image"> <!-- Replace with your image -->
                     </div>
                     <div class="name_product">
-                        <a href="#">JBL Tune 230NC TWS | wireless noise  earbuds</a>
+                        <a href="#">JBL Tune 230NC TWS | wireless noise earbuds</a>
                     </div>
                     <div class="stars">
                         <span class="material-symbols-outlined start">star</span>
@@ -182,7 +182,7 @@
                 <div class="card">
                     <div class="sale_present">-30%</div>
                     <div class="img_product">
-                        <img src="/Picture/category/tv.png" alt="Product Image">
+                        <img class="img-tv" src="/Picture/category/tv.png" alt="Product Image">
                     </div>
                     <div class="name_product">
                         <a href="#">Samsung 50'' Crystal UHD 4K Smart TV</a>
@@ -260,7 +260,7 @@
                 <div class="card">
                     <div class="sale_present">-20%</div>
                     <div class="img_product">
-                        <img src="/Picture/category/watch.png" alt="Product Image">
+                        <img class="watch" src="/Picture/category/watch.png" alt="Product Image">
                     </div>
                     <div class="name_product">
                         <a href="#">LEAF WATCH X121 WIRELESS BT </a>
@@ -274,7 +274,33 @@
                     </div>
                     <div class="price">
                         <p>$46.39</p>
-                        <span class="old_price">  $57.98</span>
+                        <span class="old_price"> $57.98</span>
+                    </div>
+                    <div class="icons">
+                        <div class="btn_add_cart"> Add to Cart</div>
+                        <div class="icon_product">
+                            <span class="material-symbols-outlined" data-product-id="0">favorite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="sale_present">-10%</div>
+                    <div class="img_product">
+                        <img src="/Picture/category/mouse.png" alt="Product Image">
+                    </div>
+                    <div class="name_product">
+                        <a href="#"> FINGERS SwiftCharge Wireless Rechargeable Mouse</a>
+                    </div>
+                    <div class="stars">
+                        <span class="material-symbols-outlined start">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <div class="price">
+                        <p>$11.45</p>
+                        <span class="old_price">$12.73</span>
                     </div>
                     <div class="icons">
                         <div class="btn_add_cart"> Add to Cart</div>
@@ -569,44 +595,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="sale_present">-30%</div>
-                    <div class="img_product">
-                        <img src="/Picture/category/phone.png" alt="Product Image">
-                    </div>
-                    <div class="name_product">
-                        <a href="#">iPhone 16 Pro Max 256GB - Black Titanium</a>
-                    </div>
-                    <div class="stars">
-                        <span class="material-symbols-outlined start">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star_half</span>
-                    </div>
-                    <div class="price">
-                        <p>960.74</p>
-                        <span class="old_price"> $1,372.49</span>
-                    </div>
-                    <div class="icons">
-                        <div class="btn_add_cart"> Add to Cart</div>
-                        <div class="icon_product">
-                            <span class="material-symbols-outlined" data-product-id="0">favorite</span>
-                        </div>
-                    </div>
-                </div>
-                
-                
+
+
 
             </div>
-        </div>  
+        </div>
     </div>
     <footer class="footer">
         <div class="logo-footer">
             <!-- <img src="./Picture/Contact/download.png" alt="PNC Shop"> -->
             <h2>PNC Shop</h2>
             <div class="img-help">
-                
+
             </div>
         </div>
         <div class="footer-left">
@@ -633,11 +633,11 @@
         <div class="footer-right">
             <h3>Let's keep in touch</h3>
             <div class="network">
-                <img src="/Picture/Contact/connection.png" alt=""> 
+                <img src="/Picture/Contact/connection.png" alt="">
                 <p>Telegram</p>
             </div>
             <div class="network">
-                <img src="/Picture/Contact/facebook.png" alt=""> 
+                <img src="/Picture/Contact/facebook.png" alt="">
                 <p>Facebook</p>
             </div>
             <div class="network">
@@ -645,11 +645,12 @@
                 <p>Tik Tok</p>
             </div>
             <div class="network">
-                <img src="/Picture/Contact/instagram.png" alt=""> 
+                <img src="/Picture/Contact/instagram.png" alt="">
                 <p>Instagram</p>
             </div>
         </div>
     </footer>
+    <script src="JS/category"></script>
 </body>
 
 </html>

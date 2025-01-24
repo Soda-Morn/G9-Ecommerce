@@ -170,13 +170,14 @@ body {
 }
 .text-side-right{
     margin-top: 42vh;
-    color:#fff;
+    color:orange;
     font-size: 2.5rem;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 .side-discont{
     color:#fff;
     font-size: 2rem;
+
 }
 .container{
   width: 90%;
@@ -232,6 +233,14 @@ a{
   width: 20%;
   background: #fff;
   margin-top: 10px;
+}
+.img-tv{
+  height: 150px;
+  object-fit: cover;
+}
+.watch{
+  height: 150px;
+  object-fit: cover;
 }
  .sale_present{
   background-color:red;
