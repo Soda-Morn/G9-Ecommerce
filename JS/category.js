@@ -1,285 +1,167 @@
-// Example array to store the products
-const products = [
-    {
-        id: 1,
-        name: 'ASUS Zenbook 14 OLED UX3405MA-PZ232W',
-        category: 'computer',
-        price: 776.75,
-        oldPrice: 1195.00,
-        sale: 35, // 35% off
-        image: '/Picture/category/computer.png',
-        rating: 4.5, // Rating (for example, 4 full stars and half a star)
-    },
-    {
-        id: 2,
-        name: 'Beats Solo3 Wireless On-Ear Headphones Silver',
-        category: 'headphone',
-        price: 40.00,
-        oldPrice: 50.00,
-        sale: 20, // 20% off
-        image: '/Picture/category/headphone.png',
-        rating: 4, // Rating (4 full stars)
-    },
-    {
-        id: 3,
-        name: 'JBL Tune 230NC TWS | wireless noise earbuds',
-        category: 'airphone',
-        price: 19.60,
-        oldPrice: 28.00,
-        sale: 30, // 30% off
-        image: '/Picture/category/eairphone.png',
-        rating: 4.5, // Rating (4 full stars and half a star)
-    },
-    {
-        id:4,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        image: "/Picture/category/phone.png",
-        sale: 30,
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id:5,
-        name: "Samsung 50'' Crystal UHD 4K Smart TV",
-        category: 'tv',
-        image: "/Picture/category/tv.png",
-        sale: 30,
-        rating: 4.5,
-        price: 105.00,
-        oldPrice: 150.00,
-      },
-      {
-        id:6,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'camera',
-        image: "/Picture/category/cmr.png",
-        sale: 30,
-        rating: 4.5,
-        price: 90.00,
-        oldPrice: 120.00,
-      },
-      {
-        id:7,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'iphone',
-        image: "/Picture/category/temblet.png",
-        sale: 25,
-        rating: 4.5,
-        price: 304.32,
-        oldPrice: 405.62,
-      },
-      {
-        id: 7,
-        name: "LEAF WATCH X121 WIRELESS BT",
-        category: 'watch',
-        image: "/Picture/category/watch.png",
-        sale: 20,
-        rating: 4.5,
-        price: 46.39,
-        oldPrice: 57.98,
-      },
-      {
-        id : 8,
-        name: "FINGERS SwiftCharge Wireless Rechargeable Mouse",
-        category: 'computer',
-        image: "/Picture/category/mouse.png",
-        sale: 10,
-        rating: 4.5,
-        price: 11.45,
-        oldPrice: 12.73,
-      },
-      {
-        id: 9,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        image: "/Picture/category/phone.png",
-        sale: 30,
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 10,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30, // percentage
-        image: "/Picture/category/phone.png",
-        rating: 4.5, // out of 5
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 11,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 12,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 13,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 14,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 15,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 16,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 17,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 18,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      },
-      {
-        id: 19,
-        name: "iPhone 16 Pro Max 256GB - Black Titanium",
-        category: 'phone',
-        sale: 30,
-        image: "/Picture/category/phone.png",
-        rating: 4.5,
-        price: 960.74,
-        oldPrice: 1372.49,
-      }
-]
+// Fetch and render products from the JSON file
+function loadProducts() {
+  fetch('../products.json')
+    .then(response => response.json())
+    .then(data => {
+      localStorage.setItem('allProducts', JSON.stringify(data)); // Store products in localStorage
+      renderProducts(data); // Render all products
+    })
+    .catch(error => console.error('Error fetching products:', error));
+}
 
-// Function to render products dynamically
-function renderProducts(products) {
-  const productContainer = document.querySelector('.product'); // Assuming you have a container with class "product"
+// Render products dynamically starting from index 5
+function renderProducts(products, showAllCategory = false) {
+  const productContainer = document.querySelector('.product');
   productContainer.innerHTML = ''; // Clear existing content
 
   if (products.length === 0) {
-      productContainer.innerHTML = '<p>No products found.</p>';
-      return;
+    productContainer.innerHTML = '<p>No products found.</p>';
+    return;
   }
 
-  products.forEach(product => {
-      const productCard = `
-          <div class="card">
-              <div class="sale_present">-${product.sale}%</div>
-              <div class="img_product">
-                  <img src="${product.image}" alt="${product.name}">
-              </div>
-              <div class="name_product">
-                  <a href="#">${product.name}</a>
-              </div>
-              <div class="stars">
-                  ${Array(5).fill().map((_, i) => 
-                      `<span class="material-symbols-outlined">
-                          ${i < Math.floor(product.rating) ? 'star' : (i === Math.floor(product.rating) && product.rating % 1 !== 0 ? 'star_half' : 'star_border')}
-                      </span>`).join('')}
-              </div>
-              <div class="price">
-                  <p>$${product.price.toFixed(2)}</p>
-                  <span class="old_price">$${product.oldPrice.toFixed(2)}</span>
-              </div>
-              <div class="icons">
-                  <div class="btn_add_cart"> Add to Cart</div>
-                  <div class="icon_product">
-                      <span class="material-symbols-outlined" data-product-id="${product.id}">favorite</span>
-                  </div>
-              </div>
+  // Slice the array to start rendering from index 5
+  const slicedProducts = products.slice(5);
+
+  slicedProducts.forEach(product => {
+    const saleText = !showAllCategory && product.sale ? `-${product.sale}%` : '';
+    const oldPriceText = !showAllCategory && product.oldPrice ? `$${product.oldPrice.toFixed(2)}` : '';
+
+    const productCard = `
+      <div class="card">
+        ${saleText ? `<div class="sale_present">${saleText}</div>` : ''}
+        <div class="img_product">
+          <img src="${product.img || product.image}" alt="${product.name}">
+        </div>
+        <div class="name_product">
+          <a href="#">${product.name}</a>
+        </div>
+        <div class="stars">
+          ${Array(5).fill().map((_, i) => 
+            `<span class="material-symbols-outlined">
+              ${i < Math.floor(product.rating || 0) ? 'star' : (i === Math.floor(product.rating || 0) && (product.rating || 0) % 1 !== 0 ? 'star_half' : 'star_border')}
+            </span>`).join('')}
+        </div>
+        <div class="price">
+          <p>$${product.price.toFixed(2)}</p>
+          ${oldPriceText ? `<span class="old_price">${oldPriceText}</span>` : ''}
+        </div>
+        <div class="icons">
+          <div class="btn_add_cart" data-product-id="${product.id}">Add to Cart</div>
+          <div class="icon_product">
+            <span class="material-symbols-outlined favorite-icon" data-product-id="${product.id}">favorite</span>
           </div>
-      `;
-      productContainer.innerHTML += productCard;
+        </div>
+      </div>`;
+    productContainer.innerHTML += productCard;
   });
+
+  attachCartButtons();
+  attachFavoriteButtons();
 }
 
-// Function to filter products based on category
+// Filter products by category
 function filterProducts(category) {
-  if (category === 'all') {
-      renderProducts(products); // Show all products
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+  const filteredProducts = category === 'all' 
+    ? allProducts 
+    : allProducts.filter(product => product.category === category);
+
+  renderProducts(filteredProducts, category === 'all');
+}
+
+// Search products
+function searchProducts(searchText) {
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+  const filteredProducts = allProducts.filter(product => 
+    product.name.toLowerCase().includes(searchText.toLowerCase())
+  );
+  renderProducts(filteredProducts);
+}
+
+// Add product to cart
+function addToCart(product) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  if (!cart.some(item => item.id === product.id)) {
+    cart.push({ ...product, quantity: 1 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Product added to cart!');
+    updateCartCount();
   } else {
-      const filteredProducts = products.filter(product => product.category === category);
-      renderProducts(filteredProducts); // Show filtered products
+    alert('Product is already in the cart!');
   }
 }
 
-// Add event listeners to category links
-document.querySelectorAll('.menu a').forEach(categoryLink => {
-  categoryLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      const selectedCategory = this.getAttribute('data-category');
-      filterProducts(selectedCategory);
-  });
-});
+// Toggle product as favorite
+function toggleFavorite(product) {
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  const index = favorites.findIndex(item => item.id === product.id);
 
-// Function to search products based on input text
-function searchProducts(searchText) {
-  const lowerCaseSearchText = searchText.toLowerCase();
+  if (index > -1) {
+    favorites.splice(index, 1); // Remove from favorites
+  } else {
+    favorites.push(product); // Add to favorites
+    alert('Product is already in the favorit !')
+  }
 
-  // Filter products that match the search text
-  const filteredProducts = products.filter(product =>
-      product.name.toLowerCase().includes(lowerCaseSearchText)
-  );
-
-  renderProducts(filteredProducts); // Render the filtered products
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  updateFavoriteCount();
 }
 
-// Add event listener to the search input field
-document.querySelector('.navbar-search input').addEventListener('input', function () {
-  const searchText = this.value;
-  searchProducts(searchText);
-});
+// Attach event listeners to cart buttons
+function attachCartButtons() {
+  document.querySelectorAll('.btn_add_cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.getAttribute('data-product-id');
+      const product = getProductById(productId);
+      addToCart(product);
+    });
+  });
+}
 
-// Initial render to show all products when the page loads
-renderProducts(products);
+// Attach event listeners to favorite buttons
+function attachFavoriteButtons() {
+  document.querySelectorAll('.favorite-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const productId = icon.getAttribute('data-product-id');
+      const product = getProductById(productId);
+      toggleFavorite(product);
+    });
+  });
+}
+
+// Get product by ID
+function getProductById(productId) {
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+  return allProducts.find(product => product.id === parseInt(productId));
+}
+
+// Update cart count
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  document.querySelector('.count_cart').textContent = cart.length;
+}
+
+// Update favorite count
+function updateFavoriteCount() {
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  document.querySelector('.count_favourite').textContent = favorites.length;
+}
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+  loadProducts();
+
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      filterProducts(link.getAttribute('data-category'));
+    });
+  });
+
+  document.querySelector('.navbar-search input').addEventListener('input', event => {
+    searchProducts(event.target.value);
+  });
+
+  updateCartCount();
+  updateFavoriteCount();
+});

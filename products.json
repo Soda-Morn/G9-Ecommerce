@@ -5,7 +5,7 @@
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "info": "Lorem ipsum dolor sit amet consectetur.",
     "price": 300,
-    "instock":"instok"
+    "instock": "in stock"
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "info": "Lorem ipsum dolor sit amet consectetur.",
     "price": 200,
-    "instock":"instok"
+    "instock": "in stock"
   },
   {
     "id": 2,
@@ -21,16 +21,15 @@
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "info": "Lorem ipsum dolor sit amet consectetur.",
     "price": 100,
-    "instock":"instok"
+    "instock": "in stock"
   },
   {
-
     "id": 3,
     "img": "../Picture/Home/8.png",
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "info": "Lorem ipsum dolor sit amet consectetur.",
     "price": 400,
-    "instock":"instok"
+    "instock": "in stock"
   },
   {
     "id": 4,
@@ -38,8 +37,216 @@
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "info": "Lorem ipsum dolor sit amet consectetur.",
     "price": 300,
-    "instock":"instok"
+    "instock": "in stock"
+  },
+  {
+    "id": 5,
+    "name": "ASUS Zenbook 14 OLED UX3405MA-PZ232W",
+    "category": "computer",
+    "price": 776.75,
+    "oldPrice": 1195.00,
+    "sale": 35,
+    "img": "/Picture/category/computer.png",
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "name": "Beats Solo3 Wireless On-Ear Headphones Silver",
+    "category": "headphone",
+    "price": 40.00,
+    "oldPrice": 50.00,
+    "sale": 20,
+    "img": "/Picture/category/headphone.png",
+    "rating": 4
+  },
+  {
+    "id": 7,
+    "name": "JBL Tune 230NC TWS | Wireless Noise Earbuds",
+    "category": "earphone",
+    "price": 19.60,
+    "oldPrice": 28.00,
+    "sale": 30,
+    "img": "/Picture/category/eairphone.png",
+    "rating": 4.5
+  },
+  {
+    "id": 8,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "price": 960.74,
+    "oldPrice": 1372.49,
+    "sale": 30,
+    "img": "/Picture/category/phone.png",
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Samsung 50'' Crystal UHD 4K Smart TV",
+    "category": "tv",
+    "price": 105.00,
+    "oldPrice": 150.00,
+    "sale": 30,
+    "img": "/Picture/category/tv.png",
+    "rating": 4.5
+  },
+  {
+    "id": 10,
+    "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
+    "category": "computer",
+    "price": 11.45,
+    "oldPrice": 12.73,
+    "sale": 10,
+    "img": "../Picture/category/mouse.png",
+    "rating": 4.5
+  },
+  {
+    "id": 11,
+    "name": "LEAF WATCH X121 Wireless BT",
+    "category": "watch",
+    "price": 46.39,
+    "oldPrice": 57.98,
+    "sale": 20,
+    "img": "/Picture/category/watch.png",
+    "rating": 4.5
+  },
+  {
+    "id": 12,
+    "name": "Samsung 50'' Crystal UHD 4K Smart TV",
+    "category": "tv",
+    "price": 105.00,
+    "oldPrice": 150.00,
+    "sale": 30,
+    "img": "/Picture/category/tv.png",
+    "rating": 4.5
+  },
+  {
+    "id": 13,
+    "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
+    "category": "computer",
+    "img": "/Picture/category/mouse.png",
+    "sale": 10,
+    "rating": 4.5,
+    "price": 11.45,
+    "oldPrice": 12.73
+  },
+  {
+    "id": 14,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 15,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 16,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 17,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 18,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 19,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 20,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 21,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 22,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 23,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 24,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 25,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
   }
-
-
 ]

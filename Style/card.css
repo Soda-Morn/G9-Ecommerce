@@ -122,6 +122,13 @@ body {
   font-size: 12px;
   border-radius: 25%;
 }
+.table{
+  margin: 24px 0;
+  color: orange;
+  width: 90%;
+  margin: auto;
+  padding: 24px;
+}
 tbody tr td img {
   width: 80px;
 }
@@ -181,55 +188,97 @@ tbody tr td img {
   padding: 0.7rem 0.5rem;
   text-align: center;
 }
-.footer {
-  height: 62vh;
-  margin-top:30px;
-  display: flex;
-  background: rgb(47, 47, 47);
-  color: rgba(255, 255, 255, 0.493);
-  font-size: 15px;
-  flex-wrap: wrap;
-  h3,
-  h2 {
-    color: white;
+.table td {
+  input{
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid gray;
+  padding-left: 10px;
   }
 }
-.footer ul li {
-  list-style: none;
-  text-align: left;
-  padding: 5px;
+.table th,
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid hsl(113, 15%, 90%);
 }
-.footer h3 {
-  margin-left: 40px;
+/* style with new product */
+.pdName, .pdprice, .subtotal{
+  color: black;
 }
-.logo-footer {
-  width: 33%;
-  padding-left: 50px;
-  display: flex;
-  flex-direction: column;
-  h2 {
-    padding: 15px;
-  }
+.quantity-input{
+  outline: none;
 }
-.footer-left,
-.footer-center {
-  width: 20%;
-  padding-top: 20px;
+.remove-item{
+  background: orange;
+  width: 100px;
+  padding: 4px;
+  border-radius: 14px;
+  color: white;
+  border: none;
+}
+/* //style for calulate product */
+.cart__total {
+  border: 1px solid rgb(209, 200, 200);
+  padding: 1.75rem;
+  border-radius: 0.25rem;
+  width: 30%;
+  margin-left: 61%;
+}
+.cart__total-table {
+  margin-bottom: 1rem;
+  border-collapse: collapse;
 }
 
-.footer-right {
-  padding: 20px 0 0 0;
+.container .table-container .cart__total-table tr td {
+  border: 1px solid gray;
+  padding: 0.75rem 0.5rem;
+  width: 30%;
 }
-.network {
+
+.cart__total-title {
+  font-size: 16px;
+}
+.cart__total .section__title{
+  font-size: 24px;
+}
+.cart__total-price {
+  color: orange;
+  font-weight: bold;
+}
+
+.cart__total .btn {
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  gap: 8px;
+  width: 130px;
+  padding: 6px;
+  border-radius: 16px;
+  background: orange;
+}
+.payicon{
+  color: black;
+}
+.info-pay{
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+.calulate-price{
   display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 0 20px;
+  flex-direction: row-reverse;
+  margin-right: 8%;
+  gap: 12px;
 }
-.footer-right img {
-  width: 25px;
-  height: 25px;
-  padding-left: 40px;
-  text-align: center;
+.clear-all-btn{
+  width: 100px;
+  padding: 6px;
+  border-radius: 16px;
+  border: none;
+  color: black;
+  background: orange;
+  font-size: 16px;
+  font-weight: 400px;
 }

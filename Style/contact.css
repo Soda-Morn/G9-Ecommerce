@@ -1,128 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
-  margin: 0;
-  font-family: "Poppins", serif;
-  /* background-color: lightblue; */
-  
-}
+    margin: 0;
+    font-family: "Poppins";
+  }
 
-.navbar-container {
-  width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
+  .navbar-container {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
 
-.navbar {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  flex-wrap: wrap;
-}
+  .navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
 
-.navbar-logo {
-  display: flex;
-  align-items: center;
-}
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
 
-.navbar-logo img {
-  width: 70px;
-  height: 70px;
-  margin-right: 10px;
-}
+  .navbar-logo img {
+    width: 50px;
+    height: 70px;
+    margin-right: 10px;
+  }
 
-.navbar-logo span {
-  font-weight: bold;
-  font-size: 18px;
-}
+  .navbar-logo span {
+    font-weight: bold;
+    font-size: 18px;
+  }
 
-.navbar-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-.navbar-menu li {
-  margin: 0 15px;
-}
+  .navbar-menu li {
+    margin: 0 15px;
+  }
 
-.navbar-menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
+  .navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
 
-.navbar-menu a:hover {
-  color: #ff4081;
-}
+  .navbar-menu a:hover {
+    color: #ff4081;
+  }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-}
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
 
-.navbar-search {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-right: 24px;
-  transition: border-color 0.3s ease;
-}
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 24px;
+    transition: border-color 0.3s ease;
+  }
 
-.navbar-search:hover {
-  border-color: #ff4081;
-}
+  .navbar-search:hover {
+    border-color: #ff4081;
+  }
 
-.navbar-search input {
-  border: none;
-  outline: none;
-  font-size: 14px;
-  width: 200px;
-  transition: width 0.3s ease;
-}
+  .navbar-search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.3s ease;
+  }
 
-.navbar-search input:focus {
-  width: 250px;
-}
+  .navbar-search input:focus {
+    width: 250px;
+  }
 
-.navbar-icons {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  position: relative;
-}
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+  }
 
-.navbar-icons .material-symbols-outlined {
-  font-size: 28px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+  .navbar-icons .material-symbols-outlined {
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
 
-.navbar-icons .material-symbols-outlined:hover {
-  color: #ff4081;
-}
-.navbar-container .navbar .menu-toggle {
-  display: none;
-}
-.navbar-container .navbar .navbar-icons a .count {
-  position: absolute;
-  top: -9px;
-  width: 15px;
-  height: 18px;
-  text-align: center;
-  line-height: 20px;
-  background: orange;
-  color: white;
-  font-size: 12px;
-  border-radius: 25%;
-}
+  .navbar-icons .material-symbols-outlined:hover {
+    color: #ff4081;
+  }
+  .navbar-container .navbar .menu-toggle{
+    display: none;
+  }
+  .navbar-container .navbar .navbar-icons a .count{
+    position: absolute;
+    top: -9px;    
+    width: 15px;
+    height: 18px;
+    text-align: center;
+    line-height: 20px;
+    background: orange;
+    color: white;  
+    font-size: 12px;
+    border-radius: 25%;
+  }
+
 
 /* container................. */
 
