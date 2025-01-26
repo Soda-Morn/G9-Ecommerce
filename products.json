@@ -111,216 +111,216 @@
     "price": 20.00,
     "old_price": 25.00,
     "instock": "in stock"
-
   },
-  {
-    "id": 12,
-    "name": "ASUS Zenbook 14 OLED UX3405MA-PZ232W",
-    "category": "computer",
-    "price": 776.75,
-    "oldPrice": 1195.00,
-    "sale": 35,
-    "img": "/Picture/category/computer.png",
-    "rating": 4.5
-  },
-  {
-    "id": 13,
-    "name": "Beats Solo3 Wireless On-Ear Headphones Silver",
-    "category": "headphone",
-    "price": 40.00,
-    "oldPrice": 50.00,
-    "sale": 20,
-    "img": "/Picture/category/headphone.png",
-    "rating": 4
-  },
-  {
-    "id": 14,
-    "name": "JBL Tune 230NC TWS | Wireless Noise Earbuds",
-    "category": "earphone",
-    "price": 19.60,
-    "oldPrice": 28.00,
-    "sale": 30,
-    "img": "/Picture/category/eairphone.png",
-    "rating": 4.5
-  },
-  {
-    "id": 15,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "price": 960.74,
-    "oldPrice": 1372.49,
-    "sale": 30,
-    "img": "/Picture/category/phone.png",
-    "rating": 4.5
-  },
-  {
-    "id": 16,
-    "name": "Samsung 50'' Crystal UHD 4K Smart TV",
-    "category": "tv",
-    "price": 105.00,
-    "oldPrice": 150.00,
-    "sale": 30,
-    "img": "/Picture/category/tv.png",
-    "rating": 4.5
-  },
-  {
-    "id": 17,
-    "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
-    "category": "computer",
-    "price": 11.45,
-    "oldPrice": 12.73,
-    "sale": 10,
-    "img": "../Picture/category/mouse.png",
-    "rating": 4.5
-  },
-  {
-    "id": 18,
-    "name": "LEAF WATCH X121 Wireless BT",
-    "category": "watch",
-    "price": 46.39,
-    "oldPrice": 57.98,
-    "sale": 20,
-    "img": "/Picture/category/watch.png",
-    "rating": 4.5
-  },
-  {
-    "id": 19,
-    "name": "Samsung 50'' Crystal UHD 4K Smart TV",
-    "category": "tv",
-    "price": 105.00,
-    "oldPrice": 150.00,
-    "sale": 30,
-    "img": "/Picture/category/tv.png",
-    "rating": 4.5
-  },
-  {
-    "id": 20,
-    "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
-    "category": "computer",
-    "img": "/Picture/category/mouse.png",
-    "sale": 10,
-    "rating": 4.5,
-    "price": 11.45,
-    "oldPrice": 12.73
-  },
+{
+  "id": 12,
+  "name": "ASUS Zenbook 14 OLED UX3405MA-PZ232W",
+  "category": "computer",
+  "price": 776.75,
+  "oldPrice": 1195.00,
+  "sale": 35,
+  "img": "/Picture/category/computer.png",
+  "rating": 4.5
+},
+{
+  "id": 13,
+  "name": "Beats Solo3 Wireless On-Ear Headphones Silver",
+  "category": "headphone",
+  "price": 40.00,
+  "oldPrice": 50.00,
+  "sale": 20,
+  "img": "/Picture/category/headphone1.png",
+  "rating": 4
+},
+{
+  "id": 14,
+  "name": "JBL Tune 230NC TWS | Wireless Noise Earbuds",
+  "category": "earphone",
+  "price": 19.60,
+  "oldPrice": 28.00,
+  "sale": 30,
+  "img": "/Picture/category/eairphone.png",
+  "rating": 4.5
+},
+{
+  "id": 15,
+  "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+  "category": "phone",
+  "price": 960.74,
+  "oldPrice": 1372.49,
+  "sale": 30,
+  "img": "/Picture/category/phone.png",
+  "rating": 4.5
+},
+{
+  "id": 16,
+  "name": "Samsung 50'' Crystal UHD 4K Smart TV",
+  "category": "tv",
+  "price": 105.00,
+  "oldPrice": 150.00,
+  "sale": 30,
+  "img": "/Picture/category/smtv.png",
+  "rating": 4.5
+},
+{
+  "id": 17,
+  "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
+  "category": "computer",
+  "price": 11.45,
+  "oldPrice": 12.73,
+  "sale": 10,
+  "img": "../Picture/category/mouse.png",
+  "rating": 4.5
+},
+{
+  "id": 18,
+  "name": "LEAF WATCH X121 Wireless BT",
+  "category": "watch",
+  "price": 46.39,
+  "oldPrice": 57.98,
+  "sale": 20,
+  "img": "/Picture/category/watch.png",
+  "rating": 4.5
+},
+{
+  "id": 19,
+  "name": "Samsung 50'' Crystal UHD 4K Smart TV",
+  "category": "tv",
+  "price": 105.00,
+  "oldPrice": 150.00,
+  "sale": 30,
+  "img": "/Picture/category/tv.png",
+  "rating": 4.5
+},
+{
+  "id": 20,
+  "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
+  "category": "computer",
+  "img": "/Picture/category/mouse.png",
+  "sale": 10,
+  "rating": 4.5,
+  "price": 11.45,
+  "oldPrice": 12.73
+},
   {
     "id": 21,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "Top 6 Cameras for New Photographers",
+    "category": "camera",
+    "img": "/Picture/category/crm.png",
+    "sale": 5,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 19.00,
+    "oldPrice": 20.00
   },
   {
     "id": 22,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
+    "name": "2022 Apple iPad 10.9-inch Wi-Fi 64GB - Pink Cambodia | Ubuy",
+    "category": "ipad",
+    "img": "/Picture/category/ipad2.png",
     "sale": 30,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 273.00,
+    "oldPrice": 390.00
   },
   {
     "id": 23,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
+    "name": "Lenovo IdeaPad 1 Laptop US Version (New)",
+    "category": "computer",
+    "img": "/Picture/category/lenovo.png",
     "sale": 30,
     "rating": 4.5,
     "price": 960.74,
-    "oldPrice": 1372.49
+    "oldPrice": 399.99
   },
   {
     "id": 24,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "name": "7 Reasons You Should Switch to a Flip Phone | OPPO Global",
     "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "img": "/Picture/category/oppo.png",
+    "sale": 20,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 400.00,
+    "oldPrice": 500.00
   },
   {
     "id": 25,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "VELL - TECH Bluetooth Smartwatch ",
+    "category": "watch",
+    "img": "/Picture/category/smartwatch.png",
+    "sale": 10,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 22.5,
+    "oldPrice": 25
   },
   {
     "id": 26,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "WH-CH520 Wireless | Headphones | Sony Philippines",
+    "category": "headphone",
+    "img": "/Picture/category/headphone2.png",
+    "sale": 5,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 14.25,
+    "oldPrice": 15.00
   },
   {
     "id": 27,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "Active Noise Canceling True Wireless Bluetooth",
+    "category": "airphone",
+    "img": "/Picture/category/earphone1.png",
+    "sale": 5,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price":16.15,
+    "oldPrice": 17
   },
   {
     "id": 28,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "Mice Wired Optical USB Computer Mouse With 3600 DPI",
+    "category": "computer",
+    "img": "/Picture/category/mouse1.png",
+    "sale": 25,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 12.37,
+    "oldPrice": 16.50
   },
   {
     "id": 29,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
+    "name": "Digital Camera PNG Transparent Images ",
+    "category": "camera",
+    "img": "/Picture/category/crm1.png",
+    "sale": 25,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 90.00,
+    "oldPrice": 120.00
   },
   {
     "id": 30,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
+    "name": "iPad Pro 11 2021 M1 WiFi 128 iPad Pro 11-inches 2021​ ",
+    "category": "ipad",
+    "img": "/Picture/category/ipad1.png",
     "sale": 30,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 559.3,
+    "oldPrice": 799.00
   },
   {
     "id": 31,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "name": "Smart TV (Android TV) | 80 cm 32 inch ",
     "category": "phone",
-    "img": "/Picture/category/phone.png",
+    "img": "/Picture/category/smarttv.png",
     "sale": 30,
     "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
+    "price": 154.00,
+    "oldPrice": 220.00
   },
   {
     "id": 32,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "name": "Samsung Galaxy S24: Phones Deals | Abanista Uganda",
     "category": "phone",
-    "img": "/Picture/category/phone.png",
+    "img": "/Picture/category/samsong.png",
     "sale": 30,
     "rating": 4.5,
     "price": 960.74,
     "oldPrice": 1372.49
   }
+  
 ]

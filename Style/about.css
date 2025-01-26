@@ -128,7 +128,6 @@ body {
     font-size: 12px;
     border-radius: 25%;
   }
-
 .header{
     background-color:#cce4eb;
     display: flex;
@@ -177,13 +176,7 @@ body {
     font-size: 1.4rem;
     text-align: center;
 }
-/* .card-body { */
-    /* width: 80%; */
-    /* margin-bottom: 50px; */
-     /* margin-right: 80px; */
-    /* margin-bottom: 80px;  */
-     /* white-space: nowrap; */
-/* } */
+
 .card-img-left {
     width: 100%;
     height: 45vh;
@@ -324,4 +317,28 @@ span{
   height: 25px;
   padding-left: 40px;
   text-align: center;
+}
+@media (max-width: 768px){
+header{
+  background-color:#cce4eb;
+  height: 5vh;   
+}
+.head{
+  font-size: 2.2rem;
+  margin-left: 30px;   
+}
+.phone{
+  margin-bottom: 5%;
+  margin-right: 10px;
+  height: 400px;
+}
+.text-advertise{  
+  /* margin: 70px; */
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.promote{
+font-size: 1.2em;
+margin-bottom: 50px;
+}
 }
