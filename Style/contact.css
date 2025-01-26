@@ -384,7 +384,44 @@ textarea {
 .footer-right p {
   font-size: 16px;
 }
+/* Responsive */
+@media (max-width: 1024px) {
+  .navbar-container .navbar .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    transform: translateY(-20px);
+     opacity: 0;
+  }
 
+  .navbar-container .navbar .navbar-menu.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-menu li{
+    margin: 10px 0;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-container .navbar .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
 @media only screen and (min-width:320px) and (max-width: 767px) {
   .row {
     flex-direction: column;

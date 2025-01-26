@@ -1309,6 +1309,9 @@ button[type="Submit"] {
     font-size: 14px;
   }
   /* New arrive */
+  .sidebar{
+    height: auto;
+  }
   .sidebar-card {
     width: 100%;
     margin-top: 20px;
@@ -1396,6 +1399,21 @@ button[type="Submit"] {
   #registerEyeIcon{
     position: absolute;
     top: 50%;
+  }
+  .footer {
+    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+  }
+  .img-footer{
+    margin-left: 150px;
   }
 }
 
