@@ -129,7 +129,7 @@
   "price": 40.00,
   "oldPrice": 50.00,
   "sale": 20,
-  "img": "/Picture/category/headphone.png",
+  "img": "/Picture/category/headphone1.png",
   "rating": 4
 },
 {
@@ -159,7 +159,7 @@
   "price": 105.00,
   "oldPrice": 150.00,
   "sale": 30,
-  "img": "/Picture/category/tv.png",
+  "img": "/Picture/category/smtv.png",
   "rating": 4.5
 },
 {

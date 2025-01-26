@@ -163,10 +163,13 @@ body {
 }
 .card-mission {
     padding: 20px;
+    width: 90%;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border: none;
+    margin-right: 90px;
+    margin-left: 90px;
 }
 .card-mission:hover{
   transform: scale(1.0);
@@ -203,6 +206,9 @@ h2.card-title {
 }
 .card-vision{
     padding: 20px;
+    width: 90%;
+    margin-left: 90px;
+    margin-right: 90px;
     margin-top: 40vh;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -318,27 +324,24 @@ span{
   padding-left: 40px;
   text-align: center;
 }
-@media (max-width: 768px){
-header{
-  background-color:#cce4eb;
-  height: 5vh;   
+@media (max-width: 834px){
+  .header{
+    background-color:#cce4eb;
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;   
 }
 .head{
-  font-size: 2.2rem;
-  margin-left: 30px;   
+  margin-top: 60px;
+  font-size: 2rem;
+  margin-left: 80px;   
 }
 .phone{
   margin-bottom: 5%;
-  margin-right: 10px;
-  height: 400px;
+  margin-right: 80px;
+  width: 5%;
+  margin-top: 10px;
+  filter: drop-shadow(0px 0px 12px black);   
 }
-.text-advertise{  
-  /* margin: 70px; */
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.promote{
-font-size: 1.2em;
-margin-bottom: 50px;
-}
+
 }
