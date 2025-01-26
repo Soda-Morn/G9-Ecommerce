@@ -3,7 +3,7 @@ function loadProducts() {
   fetch('../products.json')
     .then(response => response.json())
     .then(data => {
-      const filteredData = data.slice(5); // Start from index 5
+      const filteredData = data.slice(13); // Start from index 5
       localStorage.setItem('allProducts', JSON.stringify(filteredData)); // Store filtered products
       renderProducts(filteredData); // Render filtered products
     })

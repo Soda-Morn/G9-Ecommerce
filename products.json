@@ -41,6 +41,88 @@
   },
   {
     "id": 5,
+    "img": "../Picture/Home/cpu6.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 6,
+    "img": "../Picture/Home/cpu5.jpg",
+    "name": "Type Screen Desktop",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 6,
+    "img": "../Picture/Home/cpu4.jpg",
+    "category": "Computer",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  
+  },
+  {
+    "id": 7,
+    "img": "../Picture/Home/cpu3.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 8,
+    "img": "../Picture/Home/cpu11.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 9,
+    "img": "./Picture/Home/cpu10.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 10,
+    "img": "../Picture/Home/cpu9.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+  },
+  {
+    "id": 11,
+    "img": "../Picture/Home/cpu7.jpg",
+    "name": "Type Screen Desktop",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
+    "rating": 4.5,
+    "price": 20.00,
+    "old_price": 25.00,
+    "instock": "in stock"
+
+  },
+  {
+    "id": 12,
     "name": "ASUS Zenbook 14 OLED UX3405MA-PZ232W",
     "category": "computer",
     "price": 776.75,
@@ -50,7 +132,7 @@
     "rating": 4.5
   },
   {
-    "id": 6,
+    "id": 13,
     "name": "Beats Solo3 Wireless On-Ear Headphones Silver",
     "category": "headphone",
     "price": 40.00,
@@ -60,7 +142,7 @@
     "rating": 4
   },
   {
-    "id": 7,
+    "id": 14,
     "name": "JBL Tune 230NC TWS | Wireless Noise Earbuds",
     "category": "earphone",
     "price": 19.60,
@@ -70,7 +152,7 @@
     "rating": 4.5
   },
   {
-    "id": 8,
+    "id": 15,
     "name": "iPhone 16 Pro Max 256GB - Black Titanium",
     "category": "phone",
     "price": 960.74,
@@ -80,7 +162,7 @@
     "rating": 4.5
   },
   {
-    "id": 9,
+    "id": 16,
     "name": "Samsung 50'' Crystal UHD 4K Smart TV",
     "category": "tv",
     "price": 105.00,
@@ -90,7 +172,7 @@
     "rating": 4.5
   },
   {
-    "id": 10,
+    "id": 17,
     "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
     "category": "computer",
     "price": 11.45,
@@ -100,7 +182,7 @@
     "rating": 4.5
   },
   {
-    "id": 11,
+    "id": 18,
     "name": "LEAF WATCH X121 Wireless BT",
     "category": "watch",
     "price": 46.39,
@@ -110,7 +192,7 @@
     "rating": 4.5
   },
   {
-    "id": 12,
+    "id": 19,
     "name": "Samsung 50'' Crystal UHD 4K Smart TV",
     "category": "tv",
     "price": 105.00,
@@ -120,7 +202,7 @@
     "rating": 4.5
   },
   {
-    "id": 13,
+    "id": 20,
     "name": "FINGERS SwiftCharge Wireless Rechargeable Mouse",
     "category": "computer",
     "img": "/Picture/category/mouse.png",
@@ -128,76 +210,6 @@
     "rating": 4.5,
     "price": 11.45,
     "oldPrice": 12.73
-  },
-  {
-    "id": 14,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 15,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 16,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 17,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 18,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 19,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
-  },
-  {
-    "id": 20,
-    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
-    "category": "phone",
-    "img": "/Picture/category/phone.png",
-    "sale": 30,
-    "rating": 4.5,
-    "price": 960.74,
-    "oldPrice": 1372.49
   },
   {
     "id": 21,
@@ -241,6 +253,76 @@
   },
   {
     "id": 25,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 26,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 27,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 28,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 29,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 30,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 31,
+    "name": "iPhone 16 Pro Max 256GB - Black Titanium",
+    "category": "phone",
+    "img": "/Picture/category/phone.png",
+    "sale": 30,
+    "rating": 4.5,
+    "price": 960.74,
+    "oldPrice": 1372.49
+  },
+  {
+    "id": 32,
     "name": "iPhone 16 Pro Max 256GB - Black Titanium",
     "category": "phone",
     "img": "/Picture/category/phone.png",
