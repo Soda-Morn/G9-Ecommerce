@@ -1,41 +1,41 @@
 [
   {
     "id": 0,
-    "img": "../Picture/Home/5.png",
-    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
-    "info": "Lorem ipsum dolor sit amet consectetur.",
-    "price": 300,
-    "instock": "in stock"
+    "img": "../Picture/Home/0.png",
+    "name": "Wholesales Cheap ",
+    "info": "Model 32'32 Inch LCD Television LED TV SKD CKD",
+    "price": 350,
+    "instock":"instok"
   },
   {
     "id": 1,
-    "img": "../Picture/Home/6.png",
-    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
-    "info": "Lorem ipsum dolor sit amet consectetur.",
-    "price": 200,
-    "instock": "in stock"
+    "img": "../Picture/Home/1.png",
+    "name": "Tecno A6 Phantom 6",
+    "info": "Dual Sim - 32GB, 3GB RAM, 4G LTE, Gold",
+    "price": 150,
+    "instock":"instok"
   },
   {
     "id": 2,
     "img": "../Picture/Home/7.png",
-    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
-    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "name": "SAMSUNG ",
+    "info": "Samsung 64GB ATIV Smart PC 500T XE500T1C-A04US 11.6 Tablet",
     "price": 100,
     "instock": "in stock"
   },
   {
     "id": 3,
-    "img": "../Picture/Home/8.png",
-    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
-    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "img": "../Picture/Home/7.png",
+    "name": "Asus Vivobook",
+    "info": "Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD",
     "price": 400,
     "instock": "in stock"
   },
   {
     "id": 4,
-    "img": "../Picture/Home/9.png",
-    "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
-    "info": "Lorem ipsum dolor sit amet consectetur.",
+    "img": "../Picture/Home/3.png",
+    "name": "Nikon announces",
+    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
     "price": 300,
     "instock": "in stock"
   },

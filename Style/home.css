@@ -740,6 +740,9 @@ button:hover {
   width: 90%;
   margin: auto;
   height: 100vh;
+  h3 span{
+    color: orange;
+  }
 }
 .sidebar-card{
   display: flex;
@@ -760,6 +763,7 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 3px;
   img {
     width: 240px;
     height: 200px;
@@ -772,7 +776,7 @@ button:hover {
     text-align: center;
     background-color: rgb(245, 165, 85);
     position: relative;
-    bottom: 182px;
+    bottom: 199px;
     right: 95px;
     border-radius: 5px;
     margin-top: 5px;
@@ -809,7 +813,6 @@ button:hover {
     padding: 5px 10px;
     cursor: pointer;
     transition: 0.3s;
-
     border: 1px solid orange;
     margin-bottom: 10px;
   }
@@ -824,4 +827,60 @@ button:hover {
     background: orange;
     color: white;
   }
+}
+.card-img:hover {
+  scale: 1.06;
+  transition: 0.5s;
+}
+.footer {
+  height: 62vh;
+  display: flex;
+  margin-top: 44%;
+  background: rgb(47, 47, 47);
+  color: rgba(255, 255, 255, 0.493);
+  font-size: 15px;
+  flex-wrap: wrap;
+  h3,
+  h2 {
+    color: white;
+  }
+}
+.footer ul li {
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+}
+.footer h3 {
+  margin-left: 40px;
+}
+.logo-footer {
+  width: 33%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    padding: 15px;
+  }
+}
+.footer-left,
+.footer-center {
+  width: 20%;
+  padding-top: 20px;
+}
+
+.footer-right {
+  padding: 20px 0 0 0;
+}
+.network {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0 20px;
+}
+.footer-right img {
+  width: 25px;
+  height: 25px;
+  padding-left: 40px;
+  text-align: center;
 }
