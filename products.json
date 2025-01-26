@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "img": "../Picture/Home/7.png",
+    "img": "../Picture/Home/2.png",
     "name": "SAMSUNG ",
     "info": "Samsung 64GB ATIV Smart PC 500T XE500T1C-A04US 11.6 Tablet",
     "price": 100,
@@ -33,14 +33,6 @@
   },
   {
     "id": 4,
-    "img": "../Picture/Home/3.png",
-    "name": "Nikon announces",
-    "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
-    "price": 300,
-    "instock": "in stock"
-  },
-  {
-    "id": 5,
     "img": "../Picture/Home/cpu6.jpg",
     "name": "Type Screen Desktop",
     "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
@@ -50,7 +42,7 @@
     "instock": "in stock"
   },
   {
-    "id": 6,
+    "id": 5,
     "img": "../Picture/Home/cpu5.jpg",
     "name": "Type Screen Desktop",
     "rating": 4.5,
