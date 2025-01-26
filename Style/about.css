@@ -329,19 +329,44 @@ span{
     background-color:#cce4eb;
     display: flex;
     justify-content: space-between;
-    height: 50vh;   
+    height: 28vh;   
 }
 .head{
-  margin-top: 60px;
-  font-size: 2rem;
-  margin-left: 80px;   
+  margin-top: 30px;
+  font-size: 1rem;
+  margin-left: 30px;   
 }
 .phone{
   margin-bottom: 5%;
-  margin-right: 80px;
-  width: 5%;
-  margin-top: 10px;
+  margin-right: 20px;
+  width: 30%;
+  height: 23vh;
   filter: drop-shadow(0px 0px 12px black);   
+}
+.text-advertise{
+  margin: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 0.7rem; 
+}
+.promote{
+font-size: 1rem;
+margin-bottom: 50px;
+font-weight: bold;
+}
+.card-mission {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.card-text {
+  font-size: 0.7rem;
+  margin-right: 50px;
+  margin-left: 45px;
 }
 
 }
