@@ -397,7 +397,7 @@ span{
 }
 @media only screen and (min-width:320px) and (max-width: 767px){
   .footer {
-    
+      
     flex-direction: column;
     align-items: center;
   }

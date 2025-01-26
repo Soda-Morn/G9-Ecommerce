@@ -74,7 +74,7 @@
   },
   {
     "id": 8,
-    "img": "../Picture/Home/cpu11.jpg",
+    "img": "./Picture/Home/cpu11.jpg",
     "name": "Type Screen Desktop",
     "info": "Nikon announces 36 megapixel D800 and D800E DSLR cameras",
     "rating": 4.5,
@@ -305,7 +305,7 @@
   {
     "id": 31,
     "name": "Smart TV (Android TV) | 80 cm 32 inch ",
-    "category": "phone",
+    "category": "tv",
     "img": "/Picture/category/smarttv.png",
     "sale": 30,
     "rating": 4.5,
