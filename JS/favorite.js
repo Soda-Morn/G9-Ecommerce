@@ -1,17 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
-    // Retrieve the favorites from localStorage
+    // Load favorites from localStorage
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const tbody = document.querySelector('tbody');
+    tbody.innerHTML = ""; // Clear table before populating
 
-    // Clear existing rows (if any)
-    tbody.innerHTML = "";
-
-    // Iterate through favorites and add them to the table
     favorites.forEach(product => {
-        const tr = document.createElement('tr');
-        tr.dataset.productId = String(product.id); // Ensure ID is stored as a string
+        if (!product || !product.img || !product.name || !product.price) return; // Skip invalid products
 
-        // Image Column
+        // Create table row for product
+        const tr = document.createElement('tr');
+        tr.dataset.productId = String(product.id);
+
+        // Create product cells
         const tdImage = document.createElement('td');
         const img = document.createElement('img');
         img.src = product.img;
@@ -19,80 +19,69 @@ window.addEventListener('DOMContentLoaded', () => {
         img.className = "product-image";
         tdImage.appendChild(img);
 
-        // Name and Info Column
         const tdName = document.createElement('td');
-        tdName.innerHTML = `<div class="product-name">${product.name}</div><div class="product-description">Lorem ipsum dolor sit amet consectetur.</div>`;
+        tdName.innerHTML = `<div class="product-name">${product.name}</div><div class="product-description">Lorem ipsum dolor sit amet.</div>`;
 
-        // Price Column
         const tdPrice = document.createElement('td');
-        tdPrice.textContent = `$${product.price}`;
+        tdPrice.textContent = `$${product.price.toFixed(2)}`;
 
-        // Stock Status Column (Just for display, assuming all products are in stock)
         const tdStatus = document.createElement('td');
         tdStatus.innerHTML = `<span class="stock-status">In Stock</span>`;
 
-        // Action Column (Add to Cart)
         const tdAdd = document.createElement('td');
         tdAdd.innerHTML = `<button class="btn">Add to Cart</button>`;
 
-        // Rename/Delete Column (Trash Icon)
         const tdDelete = document.createElement('td');
         tdDelete.innerHTML = `<span class="trash-icon">🗑</span>`;
 
-        // Append all the columns to the row
-        tr.appendChild(tdImage);
-        tr.appendChild(tdName);
-        tr.appendChild(tdPrice);
-        tr.appendChild(tdStatus);
-        tr.appendChild(tdAdd);
-        tr.appendChild(tdDelete);
-
-        // Append the row to the table body
+        // Append cells to row
+        tr.append(tdImage, tdName, tdPrice, tdStatus, tdAdd, tdDelete);
         tbody.appendChild(tr);
 
-        // Add click event to the trash icon to delete the product
+        // Add to cart functionality
+        tdAdd.querySelector('.btn').addEventListener('click', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (!cart.some(item => item.id === product.id)) {
+                cart.push(product); // Add product to cart
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Product added to cart!');
+                updateCartCount();
+            } else {
+                alert('Product is already in the cart!');
+            }
+        });
+
+        // Remove from favorites functionality
         tdDelete.querySelector('.trash-icon').addEventListener('click', () => {
-            console.log(`Attempting to delete product with ID: ${product.id}`);
-
-            // Animate the row before deleting it
-            tr.classList.add('delete-animation'); // Trigger animation
-
-            // Wait for the animation to complete before deleting the product
+            tr.classList.add('delete-animation'); // Add animation
             setTimeout(() => {
-                // Remove the product from localStorage by filtering
-                const updatedFavorites = favorites.filter(fav => String(fav.id) !== String(product.id));
-                localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-
-                // Remove the row from the table
-                tbody.removeChild(tr);
-
-                // Update the favorite count
+                const updatedFavorites = favorites.filter(fav => fav.id !== product.id);
+                localStorage.setItem('favorites', JSON.stringify(updatedFavorites)); // Update localStorage
+                tbody.removeChild(tr); // Remove row
                 updateFavoriteCount();
-
-                console.log(`Deleted product with ID: ${product.id}`);
-            }, 500); // Duration of the animation (500ms)
+            }, 500); // Animation duration
         });
     });
 
-    // Update the favorite count when the page is loaded
-    updateFavoriteCount();
+    updateFavoriteCount(); // Update favorite count on load
 
-    // Add event listener to the "Clear All" button to remove all favorites
+    // Clear all favorites functionality
     document.getElementById('clear-all').addEventListener('click', () => {
-        // Clear all favorites from localStorage
-        localStorage.removeItem('favorites');
-        
-        // Clear all rows in the table
-        tbody.innerHTML = '';
-        
-        // Update the favorite count
+        localStorage.removeItem('favorites'); // Clear favorites from localStorage
+        tbody.innerHTML = ''; // Clear table
         updateFavoriteCount();
     });
 });
 
-// Function to update the favorite count displayed on the page
+// Update favorite count
 function updateFavoriteCount() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const favoriteCount = favorites.length;
-    document.querySelector('.count_favourite').textContent = favoriteCount;
+    document.querySelector('.count_favourite').textContent = favorites.length;
+}
+
+// Update cart count
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCountElement = document.querySelector('.count_cart');
+    if (cartCountElement) cartCountElement.textContent = cart.length;
 }

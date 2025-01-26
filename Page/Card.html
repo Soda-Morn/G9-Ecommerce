@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card</title>
+    <title>Card</title>
     <link rel="stylesheet" href="../Style/card.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
 </head>
 
 <body>
@@ -39,7 +38,7 @@
                     </a>
                     <a href="./favorite.html">
                         <span class="material-symbols-outlined">local_mall</span>
-                        <span class="count count_favourite">0</span>
+                        <span class="count count_card">0</span>
                     </a>
                     <a href="./Card.html">
                         <span class="material-symbols-outlined">account_circle</span>
@@ -62,14 +61,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                   
                 </tbody>
             </table>
+            <div class="cart__total">
+                <h3 class="section__title">Cart Totals</h3>
+                <table class="cart__total-table">
+                    <tr>
+                      <td><span class="cart__total-title">Cart Subtotal</span></td>
+                      <td><span class="cart__total-price" id="cart-total">0.00$</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="cart__total-title">Delivery</span></td>
+                      <td><span class="cart__total-price">Free</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="cart__total-title">Total</span></td>
+                      <td><span class="cart__total-price" id="total">0.00$</span></td>
+                    </tr>
+                </table>
+                <div class="calulate-price">
+                    <a href="checkout.html" class="btn flex btn--md">
+                        <span class="material-symbols-outlined payicon">add_card</span>
+                        <span class="info-pay">Buy Now</span>
+                    </a>
+                    <button id="clear-all" class="clear-all-btn">Clear All</button>
+                </div>
+              </div>
+            </div>
         </div>
     </section>
 
-
-
+    <script src="../JS/card.js"></script>
 </body>
 
 </html>

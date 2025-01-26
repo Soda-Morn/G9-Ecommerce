@@ -1,98 +1,77 @@
-window.addEventListener('DOMContentLoaded', () => {
-    // Retrieve the favorites from localStorage
-    const cards = JSON.parse(localStorage.getItem('cards')) || [];
-    const tbody = document.querySelector('tbody');
+document.addEventListener('DOMContentLoaded', function () {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const favorite = JSON.parse(localStorage.getItem('favorites')) || [];  // Get favorite items from localStorage
+    const cartTableBody = document.querySelector('tbody');
+    const cartTotalElement = document.getElementById('cart-total');
+    const cartTotal = document.getElementById('total');
+    const clearAllButton = document.getElementById('clear-all');
+    const countFavorite = document.querySelector('.count_favourite');
+    const countCart = document.querySelector('.count_card');
 
-    // Clear existing rows (if any)
-    tbody.innerHTML = "";
+    updateCount(cart, favorite);
+  
+    if (cart.length === 0) {
+        cartTableBody.innerHTML = '<tr><td colspan="6" class="empty-cart">Your cart is empty.</td></tr>';
+    } else {
+        displayCartItems(cart);
+    }
+    function displayCartItems(cart) {
+        cartTableBody.innerHTML = '';
+        let total = 0;
+        cart.forEach(product => {
+            const row = document.createElement('tr');
 
-    // Iterate through favorites and add them to the table
-    cards.forEach(product => {
-        const tr = document.createElement('tr');
-        tr.dataset.productId = String(product.id); // Ensure ID is stored as a string
+            row.innerHTML = `
+                <td><img src="${product.img}" alt="${product.name}" class="cart-item-image"></td>
+                <td class="pdName">${product.name}</td>
+                <td class="pdprice">$${product.price}</td>
+                <td>
+                    <input type="number" class="quantity-input" value="${product.quantity}" data-product-id="${product.id}" min="1">
+                </td>
+                <td class="subtotal">$${(product.price * product.quantity).toFixed(2)}</td>
+                <td><button class="remove-item" data-product-id="${product.id}">Remove</button></td>
+            `;
 
-        // Image Column
-        const tdImage = document.createElement('td');
-        const img = document.createElement('img');
-        img.src = product.img;
-        img.alt = product.name;
-        img.className = "product-image";
-        tdImage.appendChild(img);
-
-        // Name and Info Column
-        const tdName = document.createElement('td');
-        tdName.innerHTML = `<div class="product-name">${product.name}</div><div class="product-description">Lorem ipsum dolor sit amet consectetur.</div>`;
-
-        // Price Column
-        const tdPrice = document.createElement('td');
-        tdPrice.textContent = `$${product.price}`;
-
-        // Stock Status Column (Just for display, assuming all products are in stock)
-        const tdQuoantity = document.createElement('td');
-        tdQuoantity.innerHTML = `<span class="stock-status">In Stock</span>`;
-
-        // Action Column (Add to Cart)
-        const tdSubtotal = document.createElement('td');
-        tdSubtotal.innerHTML = `<button class="total">$0</button>`;
-
-        // Rename/Delete Column (Trash Icon)
-        const tdDelete = document.createElement('td');
-        tdDelete.innerHTML = `<span class="trash-icon">🗑</span>`;
-
-        // Append all the columns to the row
-        tr.appendChild(tdImage);
-        tr.appendChild(tdName);
-        tr.appendChild(tdPrice);
-        tr.appendChild(tdQuoantity);
-        tr.appendChild(tdSubtotal);
-        tr.appendChild(tdDelete);
-
-        // Append the row to the table body
-        tbody.appendChild(tr);
-
-        // Add click event to the trash icon to delete the product
-        tdDelete.querySelector('.trash-icon').addEventListener('click', () => {
-            console.log(`Attempting to delete product with ID: ${product.id}`);
-
-            // Animate the row before deleting it
-            tr.classList.add('delete-animation'); // Trigger animation
-
-            // Wait for the animation to complete before deleting the product
-            setTimeout(() => {
-                // Remove the product from localStorage by filtering
-                const updatedCards = cards.filter(fav => String(fav.id) !== String(product.id));
-                localStorage.setItem('cards', JSON.stringify(updatedCards));
-
-                // Remove the row from the table
-                tbody.removeChild(tr);
-
-                // Update the favorite count
-                updateFavoriteCount();
-
-                console.log(`Deleted product with ID: ${product.id}`);
-            }, 500); // Duration of the animation (500ms)
+            cartTableBody.appendChild(row);
+            total += product.price * product.quantity;
         });
+        cartTotalElement.textContent = total.toFixed(2) + "$";
+        cartTotal.textContent = total.toFixed(2) + "$";
+    }
+    cartTableBody.addEventListener('input', function (e) {
+        if (e.target.classList.contains('quantity-input')) {
+            const productId = parseInt(e.target.getAttribute('data-product-id'));
+            const newQuantity = parseInt(e.target.value);
+  
+            const product = cart.find(item => item.id === productId);
+            if (product) {
+                product.quantity = newQuantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCartItems(cart);
+                updateCount(cart, favorite);
+            }
+        }
+    });
+    cartTableBody.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-item')) {
+            const productId = parseInt(e.target.getAttribute('data-product-id'));
+
+            const newCart = cart.filter(item => item.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(newCart));
+            displayCartItems(newCart);
+            updateCount(newCart, favorite);
+        }
     });
 
-    // Update the favorite count when the page is loaded
-    updateFavoriteCount();
-
-    // Add event listener to the "Clear All" button to remove all cards
-    document.getElementById('clear-all').addEventListener('click', () => {
-        // Clear all favorites from localStorage
-        localStorage.removeItem('cards');
-        
-        // Clear all rows in the table
-        tbody.innerHTML = '';
-        
-        // Update the favorite count
-        updateFavoriteCount();
+    clearAllButton.addEventListener('click', function () {
+        localStorage.removeItem('cart');
+        displayCartItems([]); 
+        updateCount([], favorite);
     });
+    function updateCount(cart, favorite) {
+        const totalCartItems = cart.reduce((total, item) => total + item.quantity, 0);
+        countCart.textContent = totalCartItems;
+        const totalFavoriteItems = favorite.length; 
+        countFavorite.textContent = totalFavoriteItems;
+    }
 });
-
-// Function to update the favorite count displayed on the page
-function updateFavoriteCount() {
-    const cards = JSON.parse(localStorage.getItem('cards')) || [];
-    const favoriteCount = cards.length;
-    document.querySelector('.count_favourite').textContent = favoriteCount;
-}
