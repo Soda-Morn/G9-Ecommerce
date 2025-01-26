@@ -292,7 +292,7 @@ body {
 .popular-container h4 {
   margin: 70px 0;
   color: gray;
-  text-align: center; /* Center-align the title */
+  text-align: start; /* Center-align the title */
 }
 
 .cardPops {
